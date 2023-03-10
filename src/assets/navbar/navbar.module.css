@@ -1,0 +1,20 @@
+.box{
+  display: flex;
+  background-color: gray;
+  justify-content: flex-end;
+  grid-column: 1/4;
+ 
+}
+.list{
+ width: 30%;
+
+ list-style-type: none;
+ display: flex;
+ color: #D0D4DA; 
+ font-family: candara;
+ font-weight:600;
+ flex-direction: row;
+ justify-content: space-around;
+
+ 
+}
