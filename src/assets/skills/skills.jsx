@@ -11,48 +11,29 @@ import PROSTGRESQL from '../Images/postgresql.png';
 
 export default function Skills(){
 
- const SkillsIcon = (skill)=>{
+ const SkillsIcons = (skill)=>{
  
 skill = skill.skill
-  console.log(skill.key);
+
   return(
-    <div>
-        <img src={skill} alt= {`${skill.toString()} icon`} />
-        <p>{skill.toString()}</p>
+    <div className={styles.skills}>
+        <img className={styles.image} src={skill} alt= {`${skill.toString().slice(19, -4).toUpperCase()} icon`} />
+        <p>{skill.toString().slice(19, -4).toUpperCase()}</p>
       </div>
   )
  } 
 
-
   return(
     <div className={styles.box}>
-      <SkillsIcon skill={HTML}></SkillsIcon>
+      <SkillsIcons skill={HTML}></SkillsIcons>
+      <SkillsIcons skill={CSS}></SkillsIcons>
+      <SkillsIcons skill={JAVASCRIPT}></SkillsIcons>
+      <SkillsIcons skill={REACT}></SkillsIcons>
+      <SkillsIcons skill={NODE}></SkillsIcons>
+      <SkillsIcons skill={GIT}></SkillsIcons>
+      <SkillsIcons skill={PROSTGRESQL}></SkillsIcons>
+      {/* <SkillsIcons skill={HTML}></SkillsIcons> */}
 
-{/* 
-       <div>
-         <img src={HTML} alt='html icon'/>
-         <p>HTML</p>
-       </div> */}
-       {/* <div>
-         <img src={CSS} alt='css icon'/>
-         <p>CSS</p>
-       </div>
-       <div>
-         <img src={JAVASCRIPT} alt='javascript icon'/>
-         <p>JAVASCRIPT</p>
-       </div>
-       <div>
-         <img src={REACT} alt='react icon'/>
-         <p>REACT</p>
-       </div>
-       <div>
-         <img src={NODE} alt='node icon'/>
-         <p>NODE</p>
-       </div>
-       <div>
-         <img src={GIT} alt='git icon'/>
-         <p>GIT</p>
-       </div> */}
 
     </div>
 

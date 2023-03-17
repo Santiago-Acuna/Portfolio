@@ -1,9 +1,11 @@
 .app{
   display: grid;
-  width: 100vw;
-/* place-items: center; */
+  /* max-width: 100vw; */
+place-items: center;
 /* min-width: 100vw;
 min-height: 100vh; */
 background-color: #0A192F;
-grid-template-columns:3% 94% 3% ;
+grid-template-columns:3% 94% 3%;
+gap:  5% 0px;
+
 }

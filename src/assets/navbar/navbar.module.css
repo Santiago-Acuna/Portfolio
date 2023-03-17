@@ -3,6 +3,7 @@
   background-color: gray;
   justify-content: flex-end;
   grid-column: 1/4;
+  width: 100%;
  
 }
 .list{
