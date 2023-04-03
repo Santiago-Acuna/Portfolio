@@ -5,10 +5,12 @@ export default function Contact(){
 
   return(
     <div className={styles.box}>
-      <p>Contact</p>
-      <p>// Submit the form below or shoot me an email - hernandez.mario@correounivalle.edu.co</p>
+      <section class="contact" id="contact">
+       <div className={styles.divTitle}><p className={styles.title}>Contact</p></div>
+      <p className={styles.p2}>// Submit the form below or shoot me an email - santiagoacu1990@gmail.com</p>
+      <div className={styles.divForm}>
       <input
-        className={styles.subInput}
+        className={styles.inputBox}
         type="text" 
         // value={input.healthScore}
         name="name"
@@ -17,7 +19,7 @@ export default function Contact(){
     />
 
 <input
-        className={styles.subInput}
+        className={styles.inputBox}
         type="text" 
         // value={input.healthScore}
         name="email"
@@ -26,16 +28,23 @@ export default function Contact(){
     />
 
 <textarea 
-  className={styles.subTextBox}
+  className={styles.textTareaBox}
   maxLength="1000"
   type="text" 
   // value={input.summary}
   name="summary"
   // onChange={e =>handleChange(e)}
+  placeholder="Message..."
   >
   </textarea>
+  <div className={styles.btnDiv}>
 
-  <button>Submit</button>
+  <button className={styles.btn}>Submit</button>
+
+  </div>
+
+    </div>
+    </section>
 
     </div>
   )

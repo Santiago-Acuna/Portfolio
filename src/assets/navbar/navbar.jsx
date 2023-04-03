@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import styles from './navbar.module.css'
 
 export default function NavBar(){
@@ -10,30 +9,36 @@ export default function NavBar(){
       <div className={styles.box}>
       <ul className={styles.list}>
         <li>
-          Home
+        <a href="#home">Home</a>
         </li>
+    
         <li>
-          About
+        <a href="#about">About</a>
         </li>
+
         <li>
-          Skills
+          <a href="#skills">Skills</a>
+          
         </li>
         <li>
           Projects
         </li>
         <li>
-          Contact
+        <a href="#contact">Contact</a>
         </li>
-        <li>
+        {/* <li>
           Sun
-        </li>
+        </li> */}
         <li>
           En
         </li>
         <li>
           Es
         </li>
+        {/* </section> */}
       </ul>
+      <section class="home" id="home">
+      </section>
     </div>
       
     

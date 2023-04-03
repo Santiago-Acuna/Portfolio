@@ -3,7 +3,7 @@
   /* background-color: red; */
   /* align-items: center; */
   display:flex;
-  width:50%;
+  width:55%;
   flex-direction:column;
   /* text-align: left;
   place-items: left; */
@@ -11,7 +11,8 @@
   padding:0;*/
   /* flex-flow: column wrap;
   column-gap: 10px */
-  align-content: space-between
+  align-content: space-between;
+  margin: 10% 0px;
 } 
 
 .p1{
@@ -46,7 +47,7 @@
   color:#CCD6F6;
   background-color: rgba(255, 255, 255, .0);
   border-color: white;
-  width: 35%;
+  width: 31%;
   display:flex;
   font-weight:600;
   font-size: 1.3em;

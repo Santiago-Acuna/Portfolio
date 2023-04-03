@@ -1,3 +1,72 @@
 .box{
   grid-column: 2/3;
+  display:flex;
+  width:55%;
+  flex-direction:column;
+  margin: 10% 0px;
+}
+
+.p2{
+  color:#F9B82C;
+}
+
+.title{
+  font-weight: 700;
+  color: white;
+  font-size: 3rem;
+  padding:0px;
+  margin: 0px;
+}
+
+.divTitle{
+  padding:0px;
+  border-bottom:  0.3em solid;
+  border-color: #B1205A;
+  display: block;
+  width: 22%;
+}
+
+.inputBox{
+  color: white;
+  background-color: #112240;
+  padding:1em;
+  border:none;
+}
+
+.textTareaBox{
+  background-color: #112240;
+  border:none;
+  color: white;
+  padding:1em 0em 20em 1em; 
+  
+
+}
+
+.divForm{
+  flex-direction:column;
+  align-content: space-between;
+  height: auto;
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+}
+
+.btn{
+  display:flex;
+  color:#CCD6F6;
+  background-color: rgba(255, 255, 255, .0);
+  border-color: white;
+  width: 15%;
+  font-weight:600;
+  font-size: 1.3em;
+  padding:  0.5em 1em;
+  border-radius: 3px;
+  border: 2px solid;
+  justify-content: center; 
+  align-items: center; 
+}
+.btnDiv{
+  display:flex;
+  justify-content: center; 
+  align-items: center; 
 }
