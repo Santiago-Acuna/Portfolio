@@ -1,0 +1,86 @@
+.box{
+width:55%;
+
+}
+
+.title{
+  font-weight: 700;
+  color: white;
+  font-size: 3rem;
+  padding:0px;
+  margin: 0px;
+}
+
+
+.divTitle{
+  padding:0px;
+  border-bottom:  0.3em solid;
+  border-color: #B1205A;
+  display: block;
+  width: 22%;
+}
+
+.p1{
+  color:#F9B82C;
+}
+
+.proyectTitle{
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.summary{
+  background-color:#112240;
+  width: 50%;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #D0D4DA; 
+  padding:  0.2%  2%;
+  border-radius: 5px;
+  font-size: 0.8em;
+  /* position: relative; */
+  display: flex;
+
+}
+
+.img1{
+ height: 150%;
+ width: 60%;
+ position: absolute;
+ right: -5%;
+ top: -20%;
+ border-radius: 5px;
+
+
+}
+
+.mainContent{
+  display: flex;
+  position: relative;
+}
+.description{
+  position: relative;
+} 
+.p2{
+  color:#67758A;
+  width:50%;
+  font-weight: 600;
+}
+
+.a1 img:last-child{
+  display: none;
+}
+
+.a1:hover img:last-child{
+  display: block;
+}
+
+.a1:hover img:first-child{
+  display: none;
+}
+
+.image{
+  height: 1%;
+  width: 7%;
+}

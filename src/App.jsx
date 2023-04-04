@@ -8,6 +8,7 @@ import Contact from './assets/contact/contact.jsx'
 import Footer from './assets/footer/footer.jsx'
 import LeftSideBar from './assets/left sidebar/left sidebar.jsx'
 import RightSideBar from './assets/right sidebar/right sidebar.jsx'
+import Projects from './assets/projects/projects.jsx'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Presentation className={styles.contentBox}></Presentation>
       <About></About>
        <Skills></Skills>
+       <Projects></Projects>
       <Contact></Contact>
       </div>
       <Footer></Footer>

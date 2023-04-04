@@ -16,6 +16,11 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   flex-direction: column;
   place-items: center;
 }
+
+a{
+  color:#D0D4DA;
+}
+
 a:link {
   text-decoration: none;
 }
