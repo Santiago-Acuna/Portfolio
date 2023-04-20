@@ -18,21 +18,10 @@
 }
 
 .verticalBar{
-    height: 50%;
+    height: 70%;
     width:40%;
     border-right:  0.2em solid;
     border-color: #C58028;
     display: block;
 }
 
-.a1 img:last-child{
-  display: none;
-}
-
-.a1:hover img:last-child{
-  display: block;
-}
-
-.a1:hover img:first-child{
-  display: none;
-}

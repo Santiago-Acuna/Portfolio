@@ -6,35 +6,46 @@ import githubIcon from '../Images/github.png'
 import githubIconRosa from '../Images/github rosa.png'
 import pdfIcon from '../Images/pdf logo.png'
 import pdfIconRosa from '../Images/pdf logo rosa .png'
-import mailIcon from '../Images/mail blanco ph trasnparente.png'
-import mailIconRosa from '../Images/sobre logo rosa ph.png'
+
+const urlLinkedin= 'https://www.linkedin.com/in/santiago-acu%C3%B1a-894ba9256/'
+const urlGithub= 'https://github.com/Santiago-Acuna'
+const urlPdf = "https://docs.google.com/document/d/1sL9xL-pYGjmSTp3GCIJDP5vN90EkAUqR/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true"
+const urlPdfEnglish = 'https://docs.google.com/document/d/1LkqivdIoy0TjAufJMU6Ij3x7obKgSOec/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true'
 
 export default function LeftSideBar(){
 
-  
+   const ImgLink = ({img1, img2, url}) =>{
+      return(
+        <a className={styles.a1} href={url} target="_blank">
+        <img  className={styles.image}
+        src={img1}
+        onMouseOver={e => (e.currentTarget.src = `${img2}`)}
+        onMouseOut ={e => (e.currentTarget.src = `${img1}`)}/>
+        </a>
+      )
+    }
 
   return(
     <div className={styles.box}>
 
-      <a className={styles.a1} href="https://www.linkedin.com/in/santiago-acu%C3%B1a-894ba9256/" target="_blank">
-         <img className={styles.image}  src={linkedinIcon} alt="linkedinIcon"/>
-         <img className={styles.image}  src={linkedinIconRosa} alt="linkedinIconRosa"/>    
-      </a>
+        <ImgLink
+        img1={linkedinIcon}
+        img2={linkedinIconRosa}
+        url={urlLinkedin}
+        ></ImgLink>
 
-      <a className={styles.a1} href="https://github.com/Santiago-Acuna" target="_blank">
-         <img className={styles.image}  src={githubIcon} alt="githubIcon"/>
-         <img className={styles.image}  src={githubIconRosa} alt="githubIconRosa"/>    
-      </a>
+        <ImgLink
+        img1={githubIcon}
+        img2={githubIconRosa}
+        url={urlLinkedin}
+        ></ImgLink>
 
-      <a className={styles.a1} href="" target="_blank">
-         <img className={styles.image}  src={pdfIcon} alt="pdfIcon"/>
-         <img className={styles.image}  src={pdfIconRosa} alt="pdfIconRosa"/>    
-      </a>
-
-      <a className={styles.a1} href="mailto:santiagoacu1990@gmail.com" target="_blank">
-         <img className={styles.image}  src={mailIcon} alt="mailIcon"/>
-         <img className={styles.image}  src={mailIconRosa} alt="mailIconRosa"/>    
-      </a>    
+       <ImgLink
+        img1={pdfIcon}
+        img2={pdfIconRosa}
+        url={urlLinkedin}
+        ></ImgLink>
+      
 
       <div className={styles.verticalBar}></div>
 

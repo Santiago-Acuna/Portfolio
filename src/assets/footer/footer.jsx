@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './footer.module.css';
 import linkedinIcon from '../Images/linkedin logo ph.png'
 import linkedinIconRosa from '../Images/linkedin logo rosa .png'
@@ -9,33 +9,43 @@ import pdfIconRosa from '../Images/pdf logo rosa .png'
 import mailIcon from '../Images/mail blanco ph trasnparente.png'
 import mailIconRosa from '../Images/sobre logo rosa ph.png'
 
-export default function Footer(){
+const urlLinkedin= 'https://www.linkedin.com/in/santiago-acu%C3%B1a-894ba9256/'
+
+export default function Footer({Language}){
+    const ImgLink = ({img1, img2, url}) =>{
+      return(
+        <a className={styles.a1} href={url} target="_blank">
+        <img  className={styles.image}
+        src={img1}
+        onMouseOver={e => (e.currentTarget.src = `${img2}`)}
+        onMouseOut ={e => (e.currentTarget.src = `${img1}`)}/>
+        </a>
+      )
+    }
 
   return(
     <div className={styles.box}>
       <div className={styles.logoBox}>
-      <a className={styles.a1} href="https://www.linkedin.com/in/santiago-acu%C3%B1a-894ba9256/" target="_blank">
-         <img className={styles.image}  src={linkedinIcon} alt="linkedinIcon"/>
-         <img className={styles.image}  src={linkedinIconRosa} alt="linkedinIconRosa"/>    
-      </a>
+        <ImgLink
+        img1={linkedinIcon}
+        img2={linkedinIconRosa}
+        url={urlLinkedin}
+        ></ImgLink>
 
-      <a className={styles.a1} href="https://github.com/Santiago-Acuna" target="_blank">
-         <img className={styles.image}  src={githubIcon} alt="githubIcon"/>
-         <img className={styles.image}  src={githubIconRosa} alt="githubIconRosa"/>    
-      </a>
+        <ImgLink
+        img1={githubIcon}
+        img2={githubIconRosa}
+        url={urlLinkedin}
+        ></ImgLink>
 
-      <a className={styles.a1} href="" target="_blank">
-         <img className={styles.image}  src={pdfIcon} alt="githubIcon"/>
-         <img className={styles.image}  src={pdfIconRosa} alt="githubIconRosa"/>    
-      </a>
-
-      <a className={styles.a1} href="" target="_blank">
-         <img className={styles.image}  src={mailIcon} alt="githubIcon"/>
-         <img className={styles.image}  src={mailIconRosa} alt="githubIconRosa"/>    
-      </a>
-
+       <ImgLink
+        img1={pdfIcon}
+        img2={pdfIconRosa}
+        url={urlLinkedin}
+        ></ImgLink>
       </div>
-      <p className={styles.p1}>Built by Santiago Acuña</p>
+
+      <p className={styles.p1}>{Language === "English" ? "Built by Santiago Acuña" : "Hecho por  Santiago Acuña"}</p>
     </div>
   )
 }

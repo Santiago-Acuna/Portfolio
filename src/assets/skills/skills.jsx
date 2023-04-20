@@ -11,17 +11,20 @@ import PROSTGRESQL from '../Images/postgresql.png';
 import Redux from '../Images/redux.png';
 import TypeScript from '../Images/typescript.jpg';
 
-export default function Skills(){
+export default function Skills({ Language }){
 
  const SkillsIcons = (skill)=>{
  
 skill = skill.skill
 
 const skillName = skill.toString().slice(19, -4).toUpperCase()
+let learning = "(learning)"
+let aprendiendo = "aprendiendo)"
   return(
     <div className={styles.skills}>
         <img className={styles.image} src={skill} alt= {`${skill.toString().slice(19, -4).toUpperCase()} icon`} />
-        <p>{skillName === 'TYPESCRIPT' ? skillName + " " +"(learning)" : skillName}</p>
+        {Language === "English" ? <p>{skillName === 'TYPESCRIPT' ? skillName + " " + learning: skillName}</p>:
+        <p>{skillName === 'TYPESCRIPT' ? skillName + " " + aprendiendo : skillName}</p>}
       </div>
   )
  } 
@@ -29,8 +32,10 @@ const skillName = skill.toString().slice(19, -4).toUpperCase()
   return(
     <div className={styles.box}>
       <section class="skills" id="skills">
-      <div className={styles.divTitle}><p className={styles.title}>Skills</p></div>
-      <p className={styles.p1}>// Submit the form below or shoot me an email - santiagoacu1990@gmail.com</p>
+      {Language === "English" ? <div className={styles.divTitle}><p className={styles.title}>Skills</p></div> : 
+       <div className={styles.divTitleE}><p className={styles.title}>Tecnologías</p></div>}
+      {Language === "English" ? <p className={styles.p1}>// These are the technologies I've worked with</p>:
+      <p className={styles.p1}>// Estas son las tecnologías con las que he trabajado</p>}
 
     <div className={styles.skillsBox}>
       <SkillsIcons skill={HTML}></SkillsIcons>

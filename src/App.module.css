@@ -17,13 +17,17 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   place-items: center;
 }
 
-a{
+ a{
   color:#D0D4DA;
+}
+a:hover{
+  color:#B1205A;
 }
 
 a:link {
   text-decoration: none;
 }
-a:visited {
+
+/* a:visited {
   color: #D0D4DA; 
-}
+} */

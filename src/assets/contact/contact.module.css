@@ -12,7 +12,7 @@
 
 .title{
   font-weight: 700;
-  color: white;
+  color:#CCD6F6;
   font-size: 3rem;
   padding:0px;
   margin: 0px;
@@ -26,8 +26,16 @@
   width: 22%;
 }
 
+.divTitleE{
+  padding:0px;
+  border-bottom:  0.3em solid;
+  border-color: #B1205A;
+  display: block;
+  width: 25%;
+}
+
 .inputBox{
-  color: white;
+  color:#CCD6F6;
   background-color: #112240;
   padding:1em;
   border:none;
@@ -36,7 +44,7 @@
 .textTareaBox{
   background-color: #112240;
   border:none;
-  color: white;
+  color:#CCD6F6;
   padding:1em 0em 20em 1em; 
   
 

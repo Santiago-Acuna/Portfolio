@@ -1,6 +1,6 @@
 .box{
-  /* grid-column: 2/3; */
   width:55%; 
+  margin: 10% 0px;
 }
 
 .skillsBox{
@@ -17,14 +17,14 @@ color: white;
 .skills{
   padding-top: 0.5rem;
 padding-bottom: 0.5rem; 
-transition-duration: 500ms; 
+transition-duration: 1000ms; 
 box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
 
 }
 
 .skills:hover {
-  --transform-scale-x: 1.1;
- --transform-scale-y: 1.1; 
+height: 105%;
+width: 105%;
   }
 
   .image{
@@ -49,6 +49,13 @@ width: 5rem;
     border-color: #B1205A;
     display: block;
     width: 15%;
+}
+.divTitleE{
+  padding:0px;
+  border-bottom:  0.3em solid;
+  border-color: #B1205A;
+  display: block;
+  width: 32%;
 }
 .p1{
   color:#F9B82C;

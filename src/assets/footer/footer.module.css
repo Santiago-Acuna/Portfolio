@@ -3,6 +3,7 @@
   width: 25%;
   margin:0%;
   flex-direction:column;
+  height: auto;
 }
 .logoBox{
   display: flex;
@@ -23,19 +24,10 @@
 
 .a1{
 padding: 0%;
+margin:0%;
 }
 
-.a1 img:last-child{
-  display: none;
-}
 
-.a1:hover img:last-child{
-  display: block;
-}
-
-.a1:hover img:first-child{
-  display: none;
-}
 
 .p1{
   color:#F9B82C;
