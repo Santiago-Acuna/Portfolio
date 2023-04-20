@@ -22,7 +22,7 @@ function App() {
           Language={Language}
         ></Presentation>
         <About Language={Language}></About>
-        <Skills Language={Language}></Skills>
+        {/* <Skills Language={Language}></Skills> */}
         <Projects Language={Language}></Projects>
         <Contact Language={Language}></Contact>
       </div>
