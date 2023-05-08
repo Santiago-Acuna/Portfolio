@@ -8,15 +8,7 @@
 .carouselInner {
   white-space: nowrap;
   transition: ease 2s;
-
-
-
 }
-
-/* .carouselitem {
-  display: inline-block;
-  width: 100%;
-} */
 
 .carouselIndicators {
   position: absolute;

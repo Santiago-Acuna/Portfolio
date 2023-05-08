@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import styles from './skills.module.css';
 import HTML from '../Images/html.png';
 import CSS from '../Images/css.png';
