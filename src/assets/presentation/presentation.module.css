@@ -4,7 +4,7 @@
   width: 55%;
   flex-direction: column;
   align-content: space-between;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 10%;
 }
 
@@ -40,6 +40,7 @@
   border-radius: 3px;
   border: 2px solid;
   cursor: pointer;
+  margin: 5% 0px;
 }
 .btn:hover {
   background-color: #b1205a;

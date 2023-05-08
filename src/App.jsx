@@ -9,6 +9,7 @@ import Footer from "./assets/footer/footer.jsx";
 import LeftSideBar from "./assets/left sidebar/left sidebar.jsx";
 import RightSideBar from "./assets/right sidebar/right sidebar.jsx";
 import Projects from "./assets/projects/projects.jsx";
+import Certificates from "./assets/certificates/certificates";
 
 function App() {
   const [Language, setLanguage] = useState("English");
@@ -22,12 +23,13 @@ function App() {
           Language={Language}
         ></Presentation>
         <About Language={Language}></About>
-        {/* <Skills Language={Language}></Skills> */}
+        <Skills Language={Language}></Skills>
+        <Certificates Language={Language}></Certificates>
         <Projects Language={Language}></Projects>
         <Contact Language={Language}></Contact>
       </div>
       <Footer Language={Language}></Footer>
-      <LeftSideBar></LeftSideBar>
+      <LeftSideBar Language={Language}></LeftSideBar>
       <RightSideBar></RightSideBar>
     </div>
   );

@@ -6,10 +6,11 @@ import githubIcon from '../Images/github.png'
 import githubIconRosa from '../Images/github rosa.png'
 import pdfIcon from '../Images/pdf logo.png'
 import pdfIconRosa from '../Images/pdf logo rosa .png'
-import mailIcon from '../Images/mail blanco ph trasnparente.png'
-import mailIconRosa from '../Images/sobre logo rosa ph.png'
 
 const urlLinkedin= 'https://www.linkedin.com/in/santiago-acu%C3%B1a-894ba9256/'
+const urlGithub= 'https://github.com/Santiago-Acuna'
+const urlPdf = "https://docs.google.com/document/d/1sL9xL-pYGjmSTp3GCIJDP5vN90EkAUqR/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true"
+const urlPdfEnglish = 'https://docs.google.com/document/d/1LkqivdIoy0TjAufJMU6Ij3x7obKgSOec/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true'
 
 export default function Footer({Language}){
     const ImgLink = ({img1, img2, url}) =>{
@@ -35,13 +36,13 @@ export default function Footer({Language}){
         <ImgLink
         img1={githubIcon}
         img2={githubIconRosa}
-        url={urlLinkedin}
+        url={urlGithub}
         ></ImgLink>
 
        <ImgLink
         img1={pdfIcon}
         img2={pdfIconRosa}
-        url={urlLinkedin}
+        url={Language === "English" ? urlPdfEnglish : urlPdf}
         ></ImgLink>
       </div>
 

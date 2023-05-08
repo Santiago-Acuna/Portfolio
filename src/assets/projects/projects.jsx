@@ -7,8 +7,10 @@ import redirectButtonWhite from "../Images/redirect button white.png";
 import redirectButtonRose from "../Images/redirect button rose.png";
 import hype from "../Images/hype shop.jpg";
 
-const urlLinkedin =
-  "https://www.linkedin.com/in/santiago-acu%C3%B1a-894ba9256/";
+const urlRecipesGithub ="https://github.com/Santiago-Acuna/Recipes";
+const urlRecipes = "https://pi-food-vercel.vercel.app/";
+const urlHypeGithub = "https://github.com/Santiago-Acuna/Hype-Shop";
+const urlHype = "https://hype-kappa.vercel.app/";
 
 export default function Projects({ Language }) {
   const ImgLink = ({ img1, img2, url }) => {
@@ -42,7 +44,7 @@ export default function Projects({ Language }) {
             : "// Mira algunos de mis proyectos más recientes"}
         </p>
         <div>
-          <p className={styles.proyectTitle}>Repices App</p>
+          <p className={styles.proyectTitle}>Recipes App</p>
           <div className={styles.mainContent}>
             <img className={styles.img1} src={recipes} alt="project 1 img" />
             <div className={styles.description}>
@@ -75,12 +77,12 @@ export default function Projects({ Language }) {
             <ImgLink
               img1={githubIcon}
               img2={githubIconRosa}
-              url={urlLinkedin}
+              url={urlRecipesGithub}
             ></ImgLink>
             <ImgLink
               img1={redirectButtonWhite}
               img2={redirectButtonRose}
-              url={urlLinkedin}
+              url={urlRecipes}
             ></ImgLink>
           </div>
         </div>
@@ -88,7 +90,7 @@ export default function Projects({ Language }) {
         <div>
           <p className={styles.proyectTitle}>Hype Shop</p>
           <div className={styles.mainContent}>
-            <img className={styles.img1} src={hype} alt="project 2 img" />
+            <img className={styles.img1}  style={{height: "100%"}} src={hype} alt="project 2 img" />
             <div className={styles.description}>
               <div className={styles.summary}>
                 {Language === "English" ? (
@@ -130,12 +132,12 @@ export default function Projects({ Language }) {
             <ImgLink
               img1={githubIcon}
               img2={githubIconRosa}
-              url={urlLinkedin}
+              url={urlHypeGithub}
             ></ImgLink>
             <ImgLink
               img1={redirectButtonWhite}
               img2={redirectButtonRose}
-              url={urlLinkedin}
+              url={urlHype}
             ></ImgLink>
           </div>
         </div>

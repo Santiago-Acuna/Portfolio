@@ -8,9 +8,9 @@
 .logoBox{
   display: flex;
   margin:0%;
-  padding:0%;
+  /* padding:0%; */
   width: 100%;
-  padding-left: 10%;
+  padding-left: 20%;
   /* flex-direction: row;
   justify-content: space-evenly; */
 }
@@ -33,6 +33,8 @@ margin:0%;
   color:#F9B82C;
   font-weight:700;
   text-align: center;
+  margin: 5% 0px;
+  
 }
 
 

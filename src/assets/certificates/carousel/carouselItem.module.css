@@ -1,0 +1,17 @@
+.carouselItem{
+  display: inline-block;
+  justify-content: center;
+  width: 100%;
+}
+
+imgDiv{
+  display: flex
+}
+
+.image{
+   display: block;
+    margin: auto;
+    max-width: 900px;
+    max-height: 400px;
+  
+}

@@ -27,7 +27,7 @@ export default function NavBar({Language, setLanguage}) {
           {Language === "English" ? "Projects": "Proyectos" }
           </a>
         </li>
-        <li>
+        <li>                            
           <a className={styles.a1} href="#contact">
           {Language === "English" ? "Contact": "Contacto" }
           </a>

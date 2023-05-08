@@ -8,6 +8,7 @@
 
 .p2{
   color:#F9B82C;
+  margin: 2% 0px;
 }
 
 .title{
@@ -24,6 +25,7 @@
   border-color: #B1205A;
   display: block;
   width: 22%;
+  margin: 5% 0px;
 }
 
 .divTitleE{
@@ -32,6 +34,7 @@
   border-color: #B1205A;
   display: block;
   width: 25%;
+  margin: 5% 0px;
 }
 
 .inputBox{
@@ -77,4 +80,35 @@
   display:flex;
   justify-content: center; 
   align-items: center; 
+}
+
+p.danger {
+  color: red;
+  font-size: 15px;
+}
+
+input.danger {
+  border: 2px solid red;
+}
+
+h2 {
+  text-align: center;
+}
+
+.alertMessage {
+  padding: 20px;
+  width: 75%;
+  font-size: 20px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 5px 10px 2px;
+}
+
+.closeBtn {
+  float: right;
+  margin-left: 18px;
+  font-size: 30px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.4s;
 }

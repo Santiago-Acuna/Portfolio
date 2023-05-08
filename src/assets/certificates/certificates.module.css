@@ -3,7 +3,12 @@
   width: 55%;
   flex-direction: column;
   align-content: space-between;
+  justify-content:center; 
   margin: 10% 0px;
+	/* flex-wrap: nowrap;
+  overflow: hidden; */
+  /* align-items: center; */
+
 }
 
 .title {
@@ -19,25 +24,20 @@
   border-bottom: 0.3em solid;
   border-color: #b1205a;
   display: block;
-  width: 17%;
-  margin: 5% 0px;
+  width: 30%;
+  margin: 10% 0px;
 }
+
 .divTitleE {
   padding: 0px;
   border-bottom: 0.3em solid;
   border-color: #b1205a;
   display: block;
-  width: 25%;
-  margin: 5% 0px;
-  
+  width: 33%;
+  margin: 10% 0px;
 }
-.p1 {
-  font-weight: 700;
-  font-size: 2.5em;
-  color: #f9b82c;
-  margin: 5% 0px;
-}
-
-.p2 {
-  color: #ccd6f6;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

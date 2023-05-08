@@ -19,7 +19,7 @@ skill = skill.skill
 
 const skillName = skill.toString().slice(19, -4).toUpperCase()
 let learning = "(learning)"
-let aprendiendo = "aprendiendo)"
+let aprendiendo = "(aprendiendo)"
   return(
     <div className={styles.skills}>
         <img className={styles.image} src={skill} alt= {`${skill.toString().slice(19, -4).toUpperCase()} icon`} />
@@ -51,6 +51,7 @@ let aprendiendo = "aprendiendo)"
 
 
     </div>
+
     </section>
     </div>
 

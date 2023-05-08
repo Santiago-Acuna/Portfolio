@@ -1,12 +1,17 @@
 import React, { useRef, useState } from 'react';
 import styles from './contact.module.css'
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact({Language}){
+  console.log(import.meta.env.VITE_SERVICE) // 123
+  console.log(import.meta.env.VITE_TEMPLATE) // undefined
+  
   const form = useRef();
   const [input, setInput] = useState({
     user_name: "",
-    email: "",
+    user_email: "",
     message: "",
   });
   const [errors, setErrors] = useState({});
@@ -18,28 +23,17 @@ export default function Contact({Language}){
     if (!input.user_name) {
       errors.user_name = "Username is required";
       setDisabled(true);
-    } else if (!/^\b[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/.test(input.user_name)) {
-      errors.user_name = " The Username can only have letters and spaces";
-      setDisabled(true);
-    }
+    } 
 
-    if (!input.email) {
-      errors.email = "email is required";
+    if (!input.user_email) {
+      errors.user_email = "Email is required";
       setDisabled(true);
     }
-    // } else if (!/\d{1,3}/.test(input.email)) {
-    //   setDisabled(true);
-    //   errors.email = "email algo";
-    // } 
 
     if (!input.message) {
       errors.message = "Message is required";
       setDisabled(true);
-    } else if (!/^\b[A-Za-zÑñÁáÉéÍíÓóÚúÜü.,\s]+$/.test(input.message)) {
-      errors.message =
-        " The summary can only have letters, spaces, dots and comas";
-      setDisabled(true);
-    }
+    } 
     return errors;
   }
 
@@ -56,19 +50,40 @@ export default function Contact({Language}){
     );
   }
   const sendEmail = (e) => {
+    // import.meta.env.VITE_SERVICE import.meta.env.VITE_TEMPLATE import.meta.env.VITE_KEY
     e.preventDefault();
-    emailjs.sendForm('service_4wri62s', 'template_60yqwvm', form.current, '0auGPaLkIRRFcAHRY')
-    console.log("enviado")
-    console.log(form)
+    emailjs.sendForm(import.meta.env.VITE_SERVICE, import.meta.env.VITE_TEMPLATE, form.current,  import.meta.env.VITE_KEY)
+    // console.log("enviado")
+    // console.log(form)
 
 
       .then((result) => {
           console.log(result.text);
+           console.log(form.current)
       }, (error) => {
           console.log(error.text);
       });
       e.target.reset();
   };
+
+
+    const notify = () => {
+      toast.success(' The message was sent!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+    }
+  
+
+
+        
+
 
   return(
     <div className={styles.box}>
@@ -94,15 +109,15 @@ export default function Contact({Language}){
           )}
       <input
         className={styles.inputBox}
-        type="email" 
-        name="email"
+        type="email"
+        name="user_email" 
         placeholder="Email"
         autoComplete="off"
         onChange={(e) => handleChange(e)}
         
     />
-    {errors.email && (
-            <p className={styles.danger}>{errors.email}</p>
+    {errors.user_email && (
+            <p className={styles.danger}>{errors.user_email}</p>
           )}
       <textarea 
   className={styles.textTareaBox}
@@ -118,14 +133,30 @@ export default function Contact({Language}){
             <p className={styles.danger}>{errors.message}</p>
           )}
   <div className={styles.btnDiv}>
-      <button disabled={disabled} className={styles.btn} type="submit" value="Send">{Language === "English" ? "Send" : "Enviar"}</button>
+      <button disabled={disabled} onClick={notify} className={styles.btn} type="submit" value="Send">{Language === "English" ? "Send" : "Enviar"}</button>
+      
       </div>
       </div>
-    </form>
-    
+ </form>
+ <ToastContainer
+position="top-right"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
+
+
+
     </section>
 
     </div>
   )
 
 }
+

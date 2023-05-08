@@ -12,7 +12,7 @@ const urlGithub= 'https://github.com/Santiago-Acuna'
 const urlPdf = "https://docs.google.com/document/d/1sL9xL-pYGjmSTp3GCIJDP5vN90EkAUqR/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true"
 const urlPdfEnglish = 'https://docs.google.com/document/d/1LkqivdIoy0TjAufJMU6Ij3x7obKgSOec/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true'
 
-export default function LeftSideBar(){
+export default function LeftSideBar({Language}){
 
    const ImgLink = ({img1, img2, url}) =>{
       return(
@@ -37,13 +37,13 @@ export default function LeftSideBar(){
         <ImgLink
         img1={githubIcon}
         img2={githubIconRosa}
-        url={urlLinkedin}
+        url={urlGithub}
         ></ImgLink>
 
        <ImgLink
         img1={pdfIcon}
         img2={pdfIconRosa}
-        url={urlLinkedin}
+        url={Language === "English" ? urlPdfEnglish : urlPdf}
         ></ImgLink>
       
 

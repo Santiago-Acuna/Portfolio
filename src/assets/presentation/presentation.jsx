@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./presentation.module.css";
+const urlPdf = "https://docs.google.com/document/d/1sL9xL-pYGjmSTp3GCIJDP5vN90EkAUqR/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true"
+const urlPdfEnglish = 'https://docs.google.com/document/d/1LkqivdIoy0TjAufJMU6Ij3x7obKgSOec/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true'
 
 export default function Presentation({ Language }) {
   return (
@@ -40,7 +42,7 @@ export default function Presentation({ Language }) {
       )}
       <a
         className={styles.a1}
-        href="https://drive.google.com/file/d/1qYNQzwN-UQi-JcBUXRHugyNJLcYZh5YM/view?usp=sharing"
+        href={Language === "English" ? urlPdfEnglish : urlPdf}
         target="_blank"
       >
         <button className={styles.btn}>
