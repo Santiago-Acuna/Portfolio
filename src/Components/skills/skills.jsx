@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './skills.module.css';
-import HTML from '../Images/html.png';
-import CSS from '../Images/css.png';
-import JAVASCRIPT from '../Images/javascript.png';
-import REACT from '../Images/react.png';
-import NODE from '../Images/node.png';
-import GIT from '../Images/git.png';
-import PROSTGRESQL from '../Images/postgresql.png';
-import Redux from '../Images/redux.png';
-import TypeScript from '../Images/typescript.jpg';
+import HTML from '../../Images/html.png';
+import CSS from '../../Images/css.png';
+import JAVASCRIPT from '../../Images/javascript.png';
+import REACT from '../../Images/react.png';
+import NODE from '../../Images/node.png';
+import GIT from '../../Images/git.png';
+import PROSTGRESQL from '../../Images/postgresql.png';
+import Redux from '../../Images/redux.png';
+import TypeScript from '../../Images/typescript.jpg';
 
 export default function Skills({ Language }){
 

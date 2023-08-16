@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./projects.module.css";
-import recipes from "../Images/Home.jpg";
-import githubIcon from "../Images/github.png";
-import githubIconRosa from "../Images/github rosa.png";
-import redirectButtonWhite from "../Images/redirect button white.png";
-import redirectButtonRose from "../Images/redirect button rose.png";
-import hype from "../Images/hype shop.jpg";
+import recipes from "../../Images/Home.jpg";
+import githubIcon from "../../Images/github.png";
+import githubIconRosa from "../../Images/github rosa.png";
+import redirectButtonWhite from "../../Images/redirect button white.png";
+import redirectButtonRose from "../../Images/redirect button rose.png";
+import hype from "../../Images/hype shop.jpg";
 
 const urlRecipesGithub ="https://github.com/Santiago-Acuna/Recipes";
 const urlRecipes = "https://pi-food-vercel.vercel.app/";

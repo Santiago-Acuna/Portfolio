@@ -1,15 +1,15 @@
 import { useState } from "react";
 import styles from "./App.module.css";
-import Navbar from "./assets/navbar/navbar.jsx";
-import Presentation from "./assets/presentation/presentation.jsx";
-import About from "./assets/about/about.jsx";
-import Skills from "./assets/skills/skills.jsx";
-import Contact from "./assets/contact/contact.jsx";
-import Footer from "./assets/footer/footer.jsx";
-import LeftSideBar from "./assets/left sidebar/left sidebar.jsx";
-import RightSideBar from "./assets/right sidebar/right sidebar.jsx";
-import Projects from "./assets/projects/projects.jsx";
-import Certificates from "./assets/certificates/certificates";
+import Navbar from "./Components/navbar/navbar.jsx";
+import Presentation from "./Components/presentation/presentation.jsx";
+import About from "./Components/about/about.jsx";
+import Skills from "./Components/skills/skills.jsx";
+import Contact from "./Components/contact/contact.jsx";
+import Footer from "./Components/footer/footer.jsx";
+import LeftSideBar from "./Components/left sidebar/left sidebar.jsx";
+import RightSideBar from "./Components/right sidebar/right sidebar.jsx";
+import Projects from "./Components/projects/projects.jsx";
+import Certificates from "./Components/certificates/certificates";
 
 function App() {
   const [Language, setLanguage] = useState("English");

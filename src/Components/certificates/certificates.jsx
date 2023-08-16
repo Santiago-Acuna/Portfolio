@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./certificates.module.css";
 import Carousel from "./carousel/carousel.jsx";
-import HenryCertificate from "../Images/Henry certificate.png";
-import EFCertificate from "../Images/EF certificate ph.png";
+import HenryCertificate from "../../Images/Henry certificate.png";
+import EFCertificate from "../../Images/EF certificate ph.png";
 
 export default function Certificates({ Language }) {
   const slides = [HenryCertificate, EFCertificate];
