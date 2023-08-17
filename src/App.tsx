@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./App.module.css";
-// import Navbar from "./Components/navbar/navbar";
+import Navbar from "./Components/navbar/navbar";
 // import Presentation from "./Components/presentation/presentation";
 import About from "./Components/about/about.tsx";
 // import Skills from "./Components/skills/skills";
@@ -16,16 +16,16 @@ function App() {
 
   return (
     <div className={styles.app}>
-      {/* <Navbar Language={Language} setLanguage={setLanguage} />
+       <Navbar Language={Language} setLanguage={setLanguage} />
       <div className={styles.mainContent}>
-        <Presentation className={styles.contentBox} Language={Language} /> */}
+       {/* <Presentation className={styles.contentBox} Language={Language} /> */}
         <About Language={Language} />
         {/* <Skills Language={Language} />
         <Certificates Language={Language} />
         <Projects Language={Language} />
-        <Contact Language={Language} />
+        <Contact Language={Language} />*/}
       </div>
-      <Footer Language={Language} />
+      {/*<Footer Language={Language} />
       <LeftSideBar Language={Language} />
       <RightSideBar /> */}
     </div>
