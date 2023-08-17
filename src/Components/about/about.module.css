@@ -1,0 +1,43 @@
+.box {
+  display: flex;
+  width: 55%;
+  flex-direction: column;
+  align-content: space-between;
+  margin: 10% 0px;
+}
+
+.title {
+  font-weight: 700;
+  color: #ccd6f6;
+  font-size: 3rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+.divTitle {
+  padding: 0px;
+  border-bottom: 0.3em solid;
+  border-color: #b1205a;
+  display: block;
+  width: 17%;
+  margin: 5% 0px;
+}
+.divTitleE {
+  padding: 0px;
+  border-bottom: 0.3em solid;
+  border-color: #b1205a;
+  display: block;
+  width: 25%;
+  margin: 5% 0px;
+  
+}
+.p1 {
+  font-weight: 700;
+  font-size: 2.5em;
+  color: #f9b82c;
+  margin: 5% 0px;
+}
+
+.p2 {
+  color: #ccd6f6;
+}
