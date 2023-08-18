@@ -7,7 +7,7 @@ import Skills from "./Components/skills/skills";
 import Contact from "./Components/contact/contact";
 import Footer from "./Components/footer/footer";
 import LeftSideBar from "./Components/left sidebar/left sidebar";
-// import RightSideBar from "./Components/right sidebar/right sidebar";
+import RightSideBar from "./Components/right sidebar/right sidebar";
 // import Projects from "./Components/projects/projects";
 // import Certificates from "./Components/certificates/certificates";
 
@@ -27,7 +27,7 @@ function App() {
       </div>
       <Footer Language={Language} />
       <LeftSideBar Language={Language} />
-      {/*<RightSideBar /> */}
+      <RightSideBar /> 
     </div>
   );
 }
