@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./App.module.css";
 import Navbar from "./Components/navbar/navbar";
-// import Presentation from "./Components/presentation/presentation";
+import Presentation from "./Components/presentation/presentation";
 import About from "./Components/about/about.tsx";
 // import Skills from "./Components/skills/skills";
 // import Contact from "./Components/contact/contact";
@@ -18,7 +18,7 @@ function App() {
     <div className={styles.app}>
        <Navbar Language={Language} setLanguage={setLanguage} />
       <div className={styles.mainContent}>
-       {/* <Presentation className={styles.contentBox} Language={Language} /> */}
+       <Presentation  Language={Language} /> 
         <About Language={Language} />
         {/* <Skills Language={Language} />
         <Certificates Language={Language} />
