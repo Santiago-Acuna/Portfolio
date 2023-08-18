@@ -5,7 +5,7 @@ import Presentation from "./Components/presentation/presentation";
 import About from "./Components/about/about.tsx";
 import Skills from "./Components/skills/skills";
 import Contact from "./Components/contact/contact";
-// import Footer from "./Components/footer/footer";
+import Footer from "./Components/footer/footer";
 // import LeftSideBar from "./Components/left sidebar/left sidebar";
 // import RightSideBar from "./Components/right sidebar/right sidebar";
 // import Projects from "./Components/projects/projects";
@@ -25,8 +25,8 @@ function App() {
         <Projects Language={Language} />*/}
         <Contact Language={Language} />
       </div>
-      {/*<Footer Language={Language} />
-      <LeftSideBar Language={Language} />
+      <Footer Language={Language} />
+      {/*<LeftSideBar Language={Language} />
       <RightSideBar /> */}
     </div>
   );

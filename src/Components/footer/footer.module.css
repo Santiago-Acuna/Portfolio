@@ -1,0 +1,41 @@
+.box{
+  grid-column: 2/3;
+  width: 25%;
+  margin:0%;
+  flex-direction:column;
+  height: auto;
+}
+.logoBox{
+  display: flex;
+  margin:0%;
+  /* padding:0%; */
+  width: 100%;
+  padding-left: 20%;
+  /* flex-direction: row;
+  justify-content: space-evenly; */
+}
+
+.image{
+  height: 85%;
+  width: 35%;
+  margin:0%;
+  padding:0%;
+}
+
+.a1{
+padding: 0%;
+margin:0%;
+}
+
+
+
+.p1{
+  color:#F9B82C;
+  font-weight:700;
+  text-align: center;
+  margin: 5% 0px;
+  
+}
+
+
+
