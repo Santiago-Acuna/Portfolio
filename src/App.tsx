@@ -8,7 +8,7 @@ import Contact from "./Components/contact/contact";
 import Footer from "./Components/footer/footer";
 import LeftSideBar from "./Components/left sidebar/left sidebar";
 import RightSideBar from "./Components/right sidebar/right sidebar";
-// import Projects from "./Components/projects/projects";
+import Projects from "./Components/projects/projects";
 // import Certificates from "./Components/certificates/certificates";
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
        <Presentation  Language={Language} /> 
         <About Language={Language} />
         <Skills Language={Language} />
-        {/* <Certificates Language={Language} />
-        <Projects Language={Language} />*/}
+        {/* <Certificates Language={Language} />*/}
+        <Projects Language={Language} />*
         <Contact Language={Language} />
       </div>
       <Footer Language={Language} />

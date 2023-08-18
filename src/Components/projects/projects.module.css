@@ -1,0 +1,93 @@
+.box {
+  width: 55%;
+  margin: 10% 0px;
+  padding-bottom: 5%;
+}
+
+.title {
+  font-weight: 700;
+  color: white;
+  font-size: 3rem;
+  padding: 0px;
+  margin: 0px;
+}
+
+.divTitle {
+  padding: 0px;
+  border-bottom: 0.3em solid;
+  border-color: #b1205a;
+  display: block;
+  width: 22%;
+  margin: 5% 0px;
+}
+.divTitleE {
+  padding: 0px;
+  border-bottom: 0.3em solid;
+  border-color: #b1205a;
+  display: block;
+  width: 27%;
+  margin: 5% 0px;
+}
+
+.p1 {
+  color: #f9b82c;
+}
+
+.proyectTitle {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 3% 0px;
+}
+
+.summary {
+  background-color: #112240;
+  width: 50%;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #d0d4da;
+  padding: 1.5% 2%;
+  border-radius: 5px;
+  font-size: 0.8em;
+  position: relative;
+  display: flex;
+}
+
+.img1 {
+  height: 130%;
+  width: 60%;
+  position: absolute;
+  right: -5%;
+  top: -20%;
+  border-radius: 5px;
+}
+
+.mainContent {
+  display: flex;
+  position: relative;
+}
+
+.p2 {
+  color: #67758a;
+  width: 50%;
+  font-weight: 600;
+  position: relative;
+  margin: 3% 0px;
+}
+
+.diva {
+  margin: 0%;
+  padding: 0%;
+  width: 25%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+.a1 {
+  padding: 0%;
+}
+
+.image {
+  height: 60%;
+  width: 40%;
+}
