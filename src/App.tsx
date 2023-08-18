@@ -9,7 +9,7 @@ import Footer from "./Components/footer/footer";
 import LeftSideBar from "./Components/left sidebar/left sidebar";
 import RightSideBar from "./Components/right sidebar/right sidebar";
 import Projects from "./Components/projects/projects";
-// import Certificates from "./Components/certificates/certificates";
+import Certificates from "./certificates/certificates.tsx"
 
 function App() {
   const [Language, setLanguage] = useState<string>("English");
@@ -21,7 +21,7 @@ function App() {
        <Presentation  Language={Language} /> 
         <About Language={Language} />
         <Skills Language={Language} />
-        {/* <Certificates Language={Language} />*/}
+        <Certificates Language={Language} />
         <Projects Language={Language} />*
         <Contact Language={Language} />
       </div>
