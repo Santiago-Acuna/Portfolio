@@ -9,7 +9,7 @@ import Footer from "./Components/footer/footer";
 import LeftSideBar from "./Components/left sidebar/left sidebar";
 import RightSideBar from "./Components/right sidebar/right sidebar";
 import Projects from "./Components/projects/projects";
-import Certificates from "./certificates/certificates.tsx"
+import Certificates from "./Components/certificates/certificates.tsx"
 
 function App() {
   const [Language, setLanguage] = useState<string>("English");

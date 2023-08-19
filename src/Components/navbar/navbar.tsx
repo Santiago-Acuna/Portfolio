@@ -1,41 +1,43 @@
 import React from "react";
 import styles from "./navbar.module.css";
+import {Link} from "react-scroll"
 
 interface NavBarProps {
   Language: string;
   setLanguage: (language: string) => void;
+
 }
 
-const NavBar: React.FC<NavBarProps> = ({ Language, setLanguage }) => {
+const NavBar: React.FC<NavBarProps> = ({ Language, setLanguage, }) => {
   return (
     <div className={styles.box}>
       <ul className={styles.list}>
         <li>
-          <a className={styles.a1} href="#home">
+          <Link to="home" spy={true} smooth={true} offset={50} duration={500} className={styles.a1}>
             {Language === "English" ? "Home" : "Inicio"}
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a className={styles.a1} href="#about">
+          <Link to="about" spy={true} smooth={true} offset={50} duration={500} className={styles.a1}>
             {Language === "English" ? "About" : "Sobre mi"}
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a className={styles.a1} href="#skills">
+          <Link to="skills" spy={true} smooth={true} offset={50} duration={500} className={styles.a1} href="#skills">
             {Language === "English" ? "Skills" : "Tecnologías"}
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.a1} href="#projects">
+          <Link to="projects" spy={true} smooth={true} offset={50} duration={500}className={styles.a1}>
             {Language === "English" ? "Projects" : "Proyectos"}
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={styles.a1} href="#contact">
+          <Link to="contact" spy={true} smooth={true} offset={50} duration={1000}className={styles.a1}>
             {Language === "English" ? "Contact" : "Contacto"}
-          </a>
+          </Link>
         </li>
         {/* <li>
           Sun
