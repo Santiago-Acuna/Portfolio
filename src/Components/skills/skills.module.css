@@ -1,62 +1,69 @@
-.box{
-  width:55%; 
+.box {
+  width: 55%;
   margin: 10% 0px;
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
 }
 
-.skillsBox{
+.skillsBox {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-top: 2rem;
-padding-bottom: 2rem;  
-text-align: center;
-gap: 1rem;
-width:100%;
-color: white; 
+  padding-bottom: 2rem;
+  text-align: center;
+  gap: 1rem;
+  width: 100%;
+  color: white;
 }
 
-.skills{
+.skills {
   padding: 2.5rem 0.3rem;
 
-transition-duration: 1000ms; 
-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
-
+  transition-duration: 1000ms;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .skills:hover {
-height: 105%;
-width: 105%;
-  }
-
-  .image{
-    margin-left: auto;
-margin-right: auto; 
-width: 5rem;
-  background-color: #0A192F;
-  }
-
-.title{
-    font-weight: 700;
-    color: white;
-    font-size: 3rem;
-  }
- 
-  
-.divTitle{
-    padding:0px;
-    border-bottom:  0.3em solid;
-    border-color: #B1205A;
-    display: block;
-    width: 15%;
-    margin: 5% 0px;
+  height: 105%;
+  width: 105%;
 }
-.divTitleE{
-  padding:0px;
-  border-bottom:  0.3em solid;
-  border-color: #B1205A;
+
+.image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 5rem;
+  background-color: #0a192f;
+}
+
+.title {
+  font-weight: 700;
+  color: white;
+  font-size: 3rem;
+}
+
+.divTitle {
+  padding: 0px;
+  border-bottom: 0.3em solid;
+  border-color: #b1205a;
+  display: block;
+  width: 15%;
+  margin: 5% 0px;
+}
+.divTitleE {
+  padding: 0px;
+  border-bottom: 0.3em solid;
+  border-color: #b1205a;
   display: block;
   width: 32%;
   margin: 5% 0px;
 }
-.p1{
-  color:#F9B82C;
+.p1 {
+  color: #f9b82c;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }

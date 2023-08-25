@@ -1,60 +1,60 @@
-.box{
+.box {
   grid-column: 2/3;
-  display:flex;
-  width:55%;
-  flex-direction:column;
+  display: flex;
+  width: 55%;
+  flex-direction: column;
   margin: 10% 0px;
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
 }
 
-.p2{
-  color:#F9B82C;
+.p2 {
+  color: #f9b82c;
   margin: 2% 0px;
 }
 
-.title{
+.title {
   font-weight: 700;
-  color:#CCD6F6;
+  color: #ccd6f6;
   font-size: 3rem;
-  padding:0px;
+  padding: 0px;
   margin: 0px;
 }
 
-.divTitle{
-  padding:0px;
-  border-bottom:  0.3em solid;
-  border-color: #B1205A;
+.divTitle {
+  padding: 0px;
+  border-bottom: 0.3em solid;
+  border-color: #b1205a;
   display: block;
   width: 22%;
   margin: 5% 0px;
 }
 
-.divTitleE{
-  padding:0px;
-  border-bottom:  0.3em solid;
-  border-color: #B1205A;
+.divTitleE {
+  padding: 0px;
+  border-bottom: 0.3em solid;
+  border-color: #b1205a;
   display: block;
   width: 25%;
   margin: 5% 0px;
 }
 
-.inputBox{
-  color:#CCD6F6;
+.inputBox {
+  color: #ccd6f6;
   background-color: #112240;
-  padding:1em;
-  border:none;
+  padding: 1em;
+  border: none;
 }
 
-.textTareaBox{
+.textTareaBox {
   background-color: #112240;
-  border:none;
-  color:#CCD6F6;
-  padding:1em 0em 20em 1em; 
-  
-
+  border: none;
+  color: #ccd6f6;
+  padding: 1em 0em 20em 1em;
 }
 
-.divForm{
-  flex-direction:column;
+.divForm {
+  flex-direction: column;
   align-content: space-between;
   height: auto;
   gap: 1rem;
@@ -62,24 +62,24 @@
   display: flex;
 }
 
-.btn{
-  display:flex;
-  color:#CCD6F6;
-  background-color: rgba(255, 255, 255, .0);
+.btn {
+  display: flex;
+  color: #ccd6f6;
+  background-color: rgba(255, 255, 255, 0);
   border-color: white;
   width: 15%;
-  font-weight:600;
+  font-weight: 600;
   font-size: 1.3em;
-  padding:  0.5em 1em;
+  padding: 0.5em 1em;
   border-radius: 3px;
   border: 2px solid;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
-.btnDiv{
-  display:flex;
-  justify-content: center; 
-  align-items: center; 
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 p.danger {
@@ -104,3 +104,8 @@ h2 {
   box-shadow: rgb(0 0 0 / 25%) 0px 5px 10px 2px;
 }
 
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}

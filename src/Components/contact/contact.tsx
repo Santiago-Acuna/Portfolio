@@ -4,12 +4,7 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-interface ContactProps {
-  Language: string;
-}
-
-
-const Contact: React.FC<ContactProps> = ({ Language }) => {
+const Contact: React.FC<React.ComponentState> = ({ Language }) => {
   const form = useRef<HTMLFormElement | null>(null);
   const [input, setInput] = useState({
     user_name: "",
@@ -41,7 +36,9 @@ const Contact: React.FC<ContactProps> = ({ Language }) => {
     return newErrors;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     const updatedInput = {
       ...input,
@@ -70,9 +67,8 @@ const Contact: React.FC<ContactProps> = ({ Language }) => {
             console.log(error.text);
           }
         );
-        form.current.reset();
+      form.current.reset();
     }
-    
   };
 
   const notify = () => {

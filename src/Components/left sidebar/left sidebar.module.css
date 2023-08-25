@@ -1,27 +1,31 @@
-
-
-.box{
+.box {
   grid-column: 1/2;
-  grid-row:2/3;
+  grid-row: 2/3;
   height: 45%;
   width: 3%;
-  flex-direction:column;
-  bottom:0%;
+  flex-direction: column;
+  bottom: 0%;
   left: 0%;
   position: fixed;
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
 }
 
-.image{
+.image {
   height: 10%;
   width: 70%;
-  margin:10%;  
+  margin: 10%;
 }
 
-.verticalBar{
-    height: 70%;
-    width:40%;
-    border-right:  0.2em solid;
-    border-color: #C58028;
-    display: block;
+.verticalBar {
+  height: 70%;
+  width: 40%;
+  border-right: 0.2em solid;
+  border-color: #c58028;
+  display: block;
 }
-
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}

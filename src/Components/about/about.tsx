@@ -1,11 +1,7 @@
 import React from "react";
 import styles from "./about.module.css";
 
-interface AboutProps {
-  Language: string;
-}
-
-const About: React.FC<AboutProps> = ({ Language }) => {
+const About: React.FC<React.ComponentState> = ({ Language }) => {
   return (
     <div className={styles.box}>
       <section className="about" id="about">

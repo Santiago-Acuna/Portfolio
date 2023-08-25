@@ -6,6 +6,8 @@
   align-content: space-between;
   margin-top: 10%;
   margin-bottom: 10%;
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
 }
 
 .p1 {
@@ -50,4 +52,10 @@
   font-size: 1.2em;
   text-align: justify;
   text-justify: inter-word;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }

@@ -13,19 +13,19 @@ interface ImgLinkProps {
   url: string;
 }
 
-interface ProjectsProps {
-  Language: string;
-}
-
-const urlRecipesGithub ="https://github.com/Santiago-Acuna/Recipes";
+const urlRecipesGithub = "https://github.com/Santiago-Acuna/Recipes";
 const urlRecipes = "https://pi-food-vercel.vercel.app/";
 const urlHypeGithub = "https://github.com/Santiago-Acuna/Hype-Shop";
 const urlHype = "https://hype-kappa.vercel.app/";
 
-
 const ImgLink: React.FC<ImgLinkProps> = ({ img1, img2, url }) => {
   return (
-    <a className={styles.a1} href={url} target="_blank" rel="noopener noreferrer">
+    <a
+      className={styles.a1}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img
         className={styles.image}
         src={img1}
@@ -37,7 +37,7 @@ const ImgLink: React.FC<ImgLinkProps> = ({ img1, img2, url }) => {
   );
 };
 
-const Projects: React.FC<ProjectsProps> = ({ Language }) => {
+const Projects: React.FC<React.ComponentState> = ({ Language }) => {
   return (
     <div className={styles.box}>
       <section className="projects" id="projects">
@@ -77,8 +77,16 @@ const Projects: React.FC<ProjectsProps> = ({ Language }) => {
             </div>
           </div>
           <div className={styles.diva}>
-            <ImgLink img1={githubIcon} img2={githubIconRosa} url={urlRecipesGithub} />
-            <ImgLink img1={redirectButtonWhite} img2={redirectButtonRose} url={urlRecipes} />
+            <ImgLink
+              img1={githubIcon}
+              img2={githubIconRosa}
+              url={urlRecipesGithub}
+            />
+            <ImgLink
+              img1={redirectButtonWhite}
+              img2={redirectButtonRose}
+              url={urlRecipes}
+            />
           </div>
         </div>
 
@@ -86,7 +94,12 @@ const Projects: React.FC<ProjectsProps> = ({ Language }) => {
         <div>
           <p className={styles.proyectTitle}>Hype Shop</p>
           <div className={styles.mainContent}>
-            <img className={styles.img1} style={{ height: "100%" }} src={hype} alt="project 2 img" />
+            <img
+              className={styles.img1}
+              style={{ height: "100%" }}
+              src={hype}
+              alt="project 2 img"
+            />
             <div className={styles.description}>
               <div className={styles.summary}>
                 <p className="">
@@ -103,8 +116,16 @@ const Projects: React.FC<ProjectsProps> = ({ Language }) => {
             </div>
           </div>
           <div className={styles.diva}>
-            <ImgLink img1={githubIcon} img2={githubIconRosa} url={urlHypeGithub} />
-            <ImgLink img1={redirectButtonWhite} img2={redirectButtonRose} url={urlHype} />
+            <ImgLink
+              img1={githubIcon}
+              img2={githubIconRosa}
+              url={urlHypeGithub}
+            />
+            <ImgLink
+              img1={redirectButtonWhite}
+              img2={redirectButtonRose}
+              url={urlHype}
+            />
           </div>
         </div>
       </section>

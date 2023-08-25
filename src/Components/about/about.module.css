@@ -4,6 +4,8 @@
   flex-direction: column;
   align-content: space-between;
   margin: 10% 0px;
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
 }
 
 .title {
@@ -40,4 +42,10 @@
 
 .p2 {
   color: #ccd6f6;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }

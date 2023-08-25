@@ -4,11 +4,7 @@ import Carousel from "./carousel/carousel";
 import HenryCertificate from "../../Images/Henry certificate.png";
 import EFCertificate from "../../Images/EF certificate ph.png";
 
-interface CertificatesProps {
-  Language: string;
-}
-
-const Certificates: React.FC<CertificatesProps> = ({ Language }) => {
+const Certificates: React.FC<React.ComponentState> = ({ Language }) => {
   const slides: string[] = [HenryCertificate, EFCertificate];
 
   return (
