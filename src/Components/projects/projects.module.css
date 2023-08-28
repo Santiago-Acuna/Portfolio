@@ -3,7 +3,7 @@
   margin: 10% 0px;
   padding-bottom: 5%;
   opacity: 0;
-  animation: fade-in 1s ease-in forwards;
+  animation: fade-in 1.5s ease-in forwards;
 }
 
 .title {

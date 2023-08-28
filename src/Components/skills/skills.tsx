@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./skills.module.css";
 import HTML from "../../Images/html.png";
 import CSS from "../../Images/css.png";
@@ -9,8 +9,10 @@ import GIT from "../../Images/git.png";
 import POSTGRESQL from "../../Images/postgresql.png";
 import Redux from "../../Images/redux.png";
 import TypeScript from "../../Images/typescript.jpg";
+import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
 
-const Skills: React.FC<React.ComponentState> = ({ Language }) => {
+const Skills: React.FC = () => {
+  const { Language } = useContext(GlobalLanguage)!;
   const SkillsIcons: React.FC<{ skill: string; name: string }> = ({
     skill,
     name,

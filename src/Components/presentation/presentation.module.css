@@ -7,7 +7,7 @@
   margin-top: 10%;
   margin-bottom: 10%;
   opacity: 0;
-  animation: fade-in 1s ease-in forwards;
+  animation: fade-in 1.5s ease-in forwards;
 }
 
 .p1 {

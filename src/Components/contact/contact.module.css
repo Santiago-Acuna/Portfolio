@@ -5,7 +5,7 @@
   flex-direction: column;
   margin: 10% 0px;
   opacity: 0;
-  animation: fade-in 1s ease-in forwards;
+  animation: fade-in 1.5s ease-in forwards;
 }
 
 .p2 {

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./presentation.module.css";
+import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
 
 const urlPdf: string =
   "https://docs.google.com/document/d/1sL9xL-pYGjmSTp3GCIJDP5vN90EkAUqR/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true";
 const urlPdfEnglish: string =
   "https://docs.google.com/document/d/1LkqivdIoy0TjAufJMU6Ij3x7obKgSOec/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true";
 
-const Presentation: React.FC<React.ComponentState> = ({ Language }) => {
+const Presentation: React.FC = () => {
+  const { Language } = useContext(GlobalLanguage)!;
+
   return (
     <div className={styles.box}>
       {Language === "English" ? (

@@ -9,8 +9,8 @@ import Certificates from "../Components/certificates/certificates.tsx";
 import Footer from "../Components/footer/footer.tsx";
 import styles from "./infinityScroll.module.css";
 
-const InfiniteScrollComponent: React.FC<React.ComponentState> = () => {
-  const componentsList: Array<React.FC<React.ComponentState>> = [
+const InfiniteScrollComponent: React.FC = () => {
+  const componentsList: Array<React.FC> = [
     About,
     Skills,
     Certificates,
@@ -19,9 +19,9 @@ const InfiniteScrollComponent: React.FC<React.ComponentState> = () => {
     Footer,
   ];
   const [components, setComponents] = useState<Array<React.FC>>([Presentation]);
-  console.log("window.innerHeight" + window.innerHeight);
-  console.log("window.scrollY" + window.scrollY);
-  console.log("document.body.scrollHeight" + document.body.scrollHeight);
+  // console.log("window.innerHeight" + window.innerHeight);
+  // console.log("window.scrollY" + window.scrollY);
+  // console.log("document.body.scrollHeight" + document.body.scrollHeight);
 
   const fetchItems = () => {
     const newComponent = componentsList.shift();
@@ -45,7 +45,7 @@ const InfiniteScrollComponent: React.FC<React.ComponentState> = () => {
   return (
     <div className={styles.container}>
       {components.map((Component, index) => (
-        <Component key={index}/>
+        <Component key={index} />
       ))}
     </div>
   );

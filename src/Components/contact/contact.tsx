@@ -1,10 +1,12 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import styles from "./contact.module.css";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
 
-const Contact: React.FC<React.ComponentState> = ({ Language }) => {
+const Contact: React.FC = () => {
+  const { Language } = useContext(GlobalLanguage)!;
   const form = useRef<HTMLFormElement | null>(null);
   const [input, setInput] = useState({
     user_name: "",

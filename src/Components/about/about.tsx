@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./about.module.css";
+import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
+import { Title } from "../../assets/title.tsx";
+// import { TranslateText } from "../../assets/translateText.tsx";
 
-const About: React.FC<React.ComponentState> = ({ Language }) => {
+const About: React.FC = () => {
+  const { Language } = useContext(GlobalLanguage)!;
+
   return (
-    <div className={styles.box}>
+    <div className={styles.box}> 
       <section className="about" id="about">
-        {Language === "English" ? (
+        {/* {Language === "English" ? (
           <div className={styles.divTitle}>
             <p className={styles.title}>About</p>
           </div>
@@ -13,7 +18,10 @@ const About: React.FC<React.ComponentState> = ({ Language }) => {
           <div className={styles.divTitleE}>
             <p className={styles.title}>Sobre mí</p>
           </div>
-        )}
+        )} */}
+        <div className={styles.divTitle}>
+            <Title English="English" Spanish="Spanish"/>
+          </div>
         {Language === "English" ? (
           <p className={styles.p1}>
             Hi, again. Nice to meet you. Please take a look around.

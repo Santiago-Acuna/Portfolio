@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext } from "react";
 import styles from "./footer.module.css";
 import linkedinIcon from "../../Images/linkedin logo ph.png";
 import linkedinIconRosa from "../../Images/linkedin logo rosa .png";
@@ -6,8 +6,10 @@ import githubIcon from "../../Images/github.png";
 import githubIconRosa from "../../Images/github rosa.png";
 import pdfIcon from "../../Images/pdf logo.png";
 import pdfIconRosa from "../../Images/pdf logo rosa .png";
+import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
 
-const Footer: React.FC<React.ComponentState> = ({ Language }) => {
+const Footer: React.FC = () => {
+  const { Language } = useContext(GlobalLanguage)!;
   const ImgLink: React.FC<{ img1: string; img2: string; url: string }> = ({
     img1,
     img2,

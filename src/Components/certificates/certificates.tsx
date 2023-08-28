@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./certificates.module.css";
 import Carousel from "./carousel/carousel";
 import HenryCertificate from "../../Images/Henry certificate.png";
 import EFCertificate from "../../Images/EF certificate ph.png";
-
-const Certificates: React.FC<React.ComponentState> = ({ Language }) => {
+import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
+const Certificates: React.FC = () => {
+  const { Language } = useContext(GlobalLanguage)!;
   const slides: string[] = [HenryCertificate, EFCertificate];
 
   return (
