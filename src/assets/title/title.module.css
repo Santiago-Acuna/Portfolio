@@ -1,0 +1,13 @@
+.text {
+  font-weight: 700;
+  color: #ccd6f6;
+  font-size: 3rem;
+  padding: 0px;
+  margin: 0px;
+}
+.underlined {
+  border-bottom: 0.3em solid;
+  border-color: #b1205a;
+  display: block;
+  width: max-content;
+}
