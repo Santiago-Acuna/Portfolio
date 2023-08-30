@@ -1,12 +1,12 @@
 import React from "react";
-import { TranslateText } from "../TranslateText/translateText.js";
+import TranslateText from "../TranslateText/translateText.js";
 import styles from "./title.module.css";
 interface TitleProps {
   English: string;
   Spanish: string;
 }
 
-export const Title: React.FC<TitleProps> = ({ English, Spanish }) => {
+const Title: React.FC<TitleProps> = ({ English, Spanish }) => {
   return (
     <div className={styles.underlined}>
       <span className={styles.text}>
@@ -15,3 +15,5 @@ export const Title: React.FC<TitleProps> = ({ English, Spanish }) => {
     </div>
   );
 };
+
+export default Title;

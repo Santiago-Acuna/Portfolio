@@ -5,10 +5,7 @@ interface TranslateTextProps {
   Spanish: string;
 }
 
-export const TranslateText: React.FC<TranslateTextProps> = ({
-  English,
-  Spanish,
-}) => {
+const TranslateText: React.FC<TranslateTextProps> = ({ English, Spanish }) => {
   const { Language } = useContext(GlobalLanguage)!;
 
   let text = "";
@@ -20,3 +17,5 @@ export const TranslateText: React.FC<TranslateTextProps> = ({
 
   return text;
 };
+
+export default TranslateText;

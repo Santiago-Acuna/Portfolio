@@ -5,7 +5,6 @@ import LeftSideBar from "./Components/left sidebar/left sidebar";
 import RightSideBar from "./Components/right sidebar/right sidebar";
 import InfitiScroll from "./infinity scroll/infinityScroll.tsx";
 import GlobalLanguage from "./GlobalLanguage/globalLanguage.tsx";
-
 const App: React.FC = () => {
   const [Language, setLanguage] = useState<string>("English");
 

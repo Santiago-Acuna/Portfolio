@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./about.module.css";
-import { Title } from "../../assets/title/title.tsx";
-import { TranslateText } from "../../assets/TranslateText/translateText.js";
+import Title from "../../assets/title/title.tsx";
+import TranslateText from "../../assets/TranslateText/translateText.js";
 import {
   englishAbout,
   spanishAbout,

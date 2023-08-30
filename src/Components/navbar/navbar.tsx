@@ -1,76 +1,18 @@
 import React, { useContext } from "react";
 import styles from "./navbar.module.css";
-import { Link } from "react-scroll";
 import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
+import NavbarLi from "./navbarLi/navbarLi";
 
 const NavBar: React.FC = () => {
-  const { Language, setLanguage } = useContext(GlobalLanguage)!;
+  const { setLanguage } = useContext(GlobalLanguage)!;
   return (
     <div className={styles.box}>
       <ul className={styles.list}>
-        <li>
-          <Link
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            className={styles.a1}
-          >
-            {Language === "English" ? "Home" : "Inicio"}
-          </Link>
-        </li>
-
-        <li>
-          <Link
-            to="about"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            className={styles.a1}
-          >
-            {Language === "English" ? "About" : "Sobre mi"}
-          </Link>
-        </li>
-
-        <li>
-          <Link
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            className={styles.a1}
-            href="#skills"
-          >
-            {Language === "English" ? "Skills" : "Tecnologías"}
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            className={styles.a1}
-          >
-            {Language === "English" ? "Projects" : "Proyectos"}
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={1000}
-            className={styles.a1}
-          >
-            {Language === "English" ? "Contact" : "Contacto"}
-          </Link>
-        </li>
+        <NavbarLi English="Home" Spanish="Inicio" section="home" />
+        <NavbarLi English="About" Spanish="Sobre mi" section="about" />
+        <NavbarLi English="Skills" Spanish="Tecnologías" section="skills" />
+        <NavbarLi English="Projects" Spanish="Proyectos" section="projects" />
+        <NavbarLi English="Contact" Spanish="Contacto" section="contact" />
         {/* <li>
           Sun
         </li> */}
