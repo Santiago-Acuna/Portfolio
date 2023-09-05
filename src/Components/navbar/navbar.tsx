@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
 import styles from "./navbar.module.css";
-import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
+import {GlobalLanguageState,} from "../../assets/GlobalStates/globalStates.tsx";
 import NavbarLi from "./navbarLi/navbarLi";
 
 const NavBar: React.FC = () => {
-  const { setLanguage } = useContext(GlobalLanguage)!;
+  const { setLanguage } = useContext(GlobalLanguageState)!;
   return (
     <div className={styles.box}>
       <ul className={styles.list}>
-        <NavbarLi English="Home" Spanish="Inicio" section="home" />
-        <NavbarLi English="About" Spanish="Sobre mi" section="about" />
-        <NavbarLi English="Skills" Spanish="Tecnologías" section="skills" />
-        <NavbarLi English="Projects" Spanish="Proyectos" section="projects" />
-        <NavbarLi English="Contact" Spanish="Contacto" section="contact" />
+        <NavbarLi English="Home" Spanish="Inicio" id="Home" />
+        <NavbarLi English="About" Spanish="Sobre mi" id="About" />
+        <NavbarLi English="Skills" Spanish="Tecnologías" id="Skills" />
+        <NavbarLi English="Projects" Spanish="Proyectos" id="Projects" />
+        <NavbarLi English="Contact" Spanish="Contacto" id="Contact" />
         {/* <li>
           Sun
         </li> */}
@@ -27,7 +27,7 @@ const NavBar: React.FC = () => {
           </p>
         </li>
       </ul>
-      <section className="home" id="home"></section>
+      <section className="home" id="Home"></section>
     </div>
   );
 };

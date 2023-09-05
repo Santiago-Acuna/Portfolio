@@ -9,10 +9,10 @@ import GIT from "../../Images/git.png";
 import POSTGRESQL from "../../Images/postgresql.png";
 import Redux from "../../Images/redux.png";
 import TypeScript from "../../Images/typescript.jpg";
-import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
+import {GlobalLanguageState} from "../../assets/GlobalStates/globalStates.tsx";
 
 const Skills: React.FC = () => {
-  const { Language } = useContext(GlobalLanguage)!;
+  const { Language } = useContext(GlobalLanguageState)!;
   const SkillsIcons: React.FC<{ skill: string; name: string }> = ({
     skill,
     name,
@@ -42,7 +42,7 @@ const Skills: React.FC = () => {
 
   return (
     <div className={styles.box}>
-      <section className="skills" id="skills">
+      <section className="skills" id="Skills">
         {Language === "English" ? (
           <div className={styles.divTitle}>
             <p className={styles.title}>Skills</p>

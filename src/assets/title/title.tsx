@@ -1,5 +1,5 @@
 import React from "react";
-import TranslateText from "../TranslateText/translateText.js";
+import TranslateText from "../TranslateText/translateText.tsx";
 import styles from "./title.module.css";
 interface TitleProps {
   English: string;

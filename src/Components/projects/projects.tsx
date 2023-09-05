@@ -6,7 +6,7 @@ import githubIconRosa from "../../Images/github rosa.png";
 import redirectButtonWhite from "../../Images/redirect button white.png";
 import redirectButtonRose from "../../Images/redirect button rose.png";
 import hype from "../../Images/hype shop.jpg";
-import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
+import {GlobalLanguageState} from "../../assets/GlobalStates/globalStates.tsx";
 
 interface ImgLinkProps {
   img1: string;
@@ -39,10 +39,10 @@ const ImgLink: React.FC<ImgLinkProps> = ({ img1, img2, url }) => {
 };
 
 const Projects: React.FC = () => {
-  const { Language } = useContext(GlobalLanguage)!;
+  const { Language } = useContext(GlobalLanguageState)!;
   return (
     <div className={styles.box}>
-      <section className="projects" id="projects">
+      <section className="projects" id="Projects">
         {Language === "English" ? (
           <div className={styles.divTitle}>
             <p className={styles.title}>Projects</p>

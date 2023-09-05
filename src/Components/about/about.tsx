@@ -12,7 +12,7 @@ import {
 const About: React.FC = () => {
   return (
     <div className={styles.box}>
-      <section className="about" id="about">
+      <section className="about" id="About">
         <Title English="About me" Spanish="Sobre mi" />
         <p className={styles.p1}>
           <TranslateText

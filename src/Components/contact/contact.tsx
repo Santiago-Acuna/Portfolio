@@ -3,10 +3,10 @@ import styles from "./contact.module.css";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
+import {GlobalLanguageState} from "../../assets/GlobalStates/globalStates.tsx";
 
 const Contact: React.FC = () => {
-  const { Language } = useContext(GlobalLanguage)!;
+  const { Language } = useContext(GlobalLanguageState)!;
   const form = useRef<HTMLFormElement | null>(null);
   const [input, setInput] = useState({
     user_name: "",
@@ -88,7 +88,7 @@ const Contact: React.FC = () => {
 
   return (
     <div className={styles.box}>
-      <section className="contact" id="contact">
+      <section className="contact" id="Contact">
         {Language === "English" ? (
           <div className={styles.divTitle}>
             <p className={styles.title}>Contact</p>

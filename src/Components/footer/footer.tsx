@@ -6,10 +6,10 @@ import githubIcon from "../../Images/github.png";
 import githubIconRosa from "../../Images/github rosa.png";
 import pdfIcon from "../../Images/pdf logo.png";
 import pdfIconRosa from "../../Images/pdf logo rosa .png";
-import GlobalLanguage from "../../GlobalLanguage/globalLanguage.tsx";
+import {GlobalLanguageState} from "../../assets/GlobalStates/globalStates.tsx";
 
 const Footer: React.FC = () => {
-  const { Language } = useContext(GlobalLanguage)!;
+  const { Language } = useContext(GlobalLanguageState)!;
   const ImgLink: React.FC<{ img1: string; img2: string; url: string }> = ({
     img1,
     img2,
