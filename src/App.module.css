@@ -28,6 +28,6 @@ a:link {
   text-decoration: none;
 }
 
-/* a:visited {
-  color: #D0D4DA; 
-} */
+section[id]{
+  scroll-margin-top: 50px;
+}

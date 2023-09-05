@@ -11,6 +11,7 @@ const NavBar: React.FC = () => {
         <NavbarLi English="Home" Spanish="Inicio" id="Home" />
         <NavbarLi English="About" Spanish="Sobre mi" id="About" />
         <NavbarLi English="Skills" Spanish="Tecnologías" id="Skills" />
+        <NavbarLi English="Certificates" Spanish="Certificados" id="Certificates" />
         <NavbarLi English="Projects" Spanish="Proyectos" id="Projects" />
         <NavbarLi English="Contact" Spanish="Contacto" id="Contact" />
         {/* <li>

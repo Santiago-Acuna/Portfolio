@@ -3,8 +3,13 @@
   justify-content: flex-end;
   grid-column: 1/4;
   width: 100%;
-  opacity: 0;
-  animation: fade-in 1.5s ease-in forwards;
+  opacity: 1;
+  /* animation: fade-in 1.5s ease-in forwards; */
+  top: 0%;
+  position: fixed; 
+  background-color: #0A192F;
+  z-index: 2;
+  padding-bottom: 1%;
 }
 .list {
   width: 30%;
