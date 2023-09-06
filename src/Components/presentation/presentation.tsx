@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./presentation.module.css";
-const urlPdf = "https://docs.google.com/document/d/1sL9xL-pYGjmSTp3GCIJDP5vN90EkAUqR/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true"
-const urlPdfEnglish = 'https://docs.google.com/document/d/1LkqivdIoy0TjAufJMU6Ij3x7obKgSOec/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true'
+import {GlobalLanguageState} from "../../assets/GlobalStates/globalStates.tsx";
 
-export default function Presentation({ Language }) {
+const urlPdf: string =
+  "https://docs.google.com/document/d/1sL9xL-pYGjmSTp3GCIJDP5vN90EkAUqR/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true";
+const urlPdfEnglish: string =
+  "https://docs.google.com/document/d/1LkqivdIoy0TjAufJMU6Ij3x7obKgSOec/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true";
+
+const Presentation: React.FC = () => {
+  const { Language } = useContext(GlobalLanguageState)!;
+
   return (
     <div className={styles.box}>
+      <section  id="Presentation">
       {Language === "English" ? (
         <p className={styles.p1}>Hi, my name is</p>
       ) : (
@@ -44,6 +51,7 @@ export default function Presentation({ Language }) {
         className={styles.a1}
         href={Language === "English" ? urlPdfEnglish : urlPdf}
         target="_blank"
+        rel="noopener noreferrer nofollow external"
       >
         <button className={styles.btn}>
           {Language === "English"
@@ -51,6 +59,9 @@ export default function Presentation({ Language }) {
             : " Mira mi curriculum !"}
         </button>
       </a>
+      </section>
     </div>
   );
-}
+};
+
+export default Presentation;

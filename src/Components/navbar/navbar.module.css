@@ -1,25 +1,36 @@
-.box{
+.box {
   display: flex;
   justify-content: flex-end;
   grid-column: 1/4;
   width: 100%;
- 
+  opacity: 1;
+  /* animation: fade-in 1.5s ease-in forwards; */
+  top: 0%;
+  position: fixed; 
+  background-color: #0A192F;
+  z-index: 2;
+  padding-bottom: 1%;
 }
-.list{
- width: 30%;
-
- list-style-type: none;
- display: flex;
- color: #D0D4DA; 
- font-family: candara;
- font-weight:600;
- flex-direction: row;
- justify-content: space-around;
- margin-top: 1%;
-
+.list {
+  width: 30%;
+  list-style-type: none;
+  display: flex;
+  color: #d0d4da;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1%;
 }
 
-.p1:hover{
+.p1:hover {
   cursor: pointer;
-  color:#F9B82C;
+  color: #f9b82c;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }

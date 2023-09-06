@@ -1,30 +1,36 @@
-.box{
+.box {
   grid-column: 3/4;
-  grid-row:2/3;
+  grid-row: 2/3;
   height: 55%;
-   width: 3%;
-  flex-direction:column;
-  bottom:0%;
+  width: 3%;
+  flex-direction: column;
+  bottom: 0%;
   right: 0%;
   position: fixed;
+  opacity: 0;
+  animation: fade-in 1.5s ease-in forwards;
 }
-.p1Box{
-  height:50%;
- 
+.p1Box {
+  height: 50%;
 }
-.p1{
-  color:white;
+.p1 {
+  color: white;
   transform: rotate(90deg);
 }
 
-.p1:hover{
-  color:#B1205A;
-
+.p1:hover {
+  color: #b1205a;
 }
-.verticalBar{
+.verticalBar {
   height: 50%;
-  width:40%;
-  border-right:  0.2em solid;
-  border-color: #C58028;
+  width: 40%;
+  border-right: 0.2em solid;
+  border-color: #c58028;
   display: block;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }

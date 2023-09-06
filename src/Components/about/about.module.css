@@ -4,6 +4,8 @@
   flex-direction: column;
   align-content: space-between;
   margin: 10% 0px;
+  opacity: 0;
+  animation: fade-in 1.5s ease-in forwards;
 }
 
 .title {
@@ -12,6 +14,8 @@
   font-size: 3rem;
   padding: 0px;
   margin: 0px;
+  /* width:auto; */
+  background-color: red;
 }
 
 .divTitle {
@@ -19,7 +23,7 @@
   border-bottom: 0.3em solid;
   border-color: #b1205a;
   display: block;
-  width: 17%;
+  /* width: min-content; */
   margin: 5% 0px;
 }
 .divTitleE {
@@ -40,4 +44,10 @@
 
 .p2 {
   color: #ccd6f6;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }

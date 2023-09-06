@@ -1,71 +1,76 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import styles from "./contact.module.css";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {GlobalLanguageState} from "../../assets/GlobalStates/globalStates.tsx";
 
-export default function Contact({ Language }) {
-  const form = useRef();
+const Contact: React.FC = () => {
+  const { Language } = useContext(GlobalLanguageState)!;
+  const form = useRef<HTMLFormElement | null>(null);
   const [input, setInput] = useState({
     user_name: "",
     user_email: "",
     message: "",
   });
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [disabled, setDisabled] = useState(true);
 
-  const validate = (input) => {
+  const validate = (inputData: typeof input) => {
     setDisabled(false);
-    let errors = {};
-    if (!input.user_name) {
-      errors.user_name = "Username is required";
+    const newErrors: { [key: string]: string } = {};
+
+    if (!inputData.user_name) {
+      newErrors.user_name = "Username is required";
       setDisabled(true);
     }
 
-    if (!input.user_email) {
-      errors.user_email = "Email is required";
+    if (!inputData.user_email) {
+      newErrors.user_email = "Email is required";
       setDisabled(true);
     }
 
-    if (!input.message) {
-      errors.message = "Message is required";
+    if (!inputData.message) {
+      newErrors.message = "Message is required";
       setDisabled(true);
     }
-    return errors;
+
+    return newErrors;
   };
 
-  const handleChange = (e) => {
-    setInput({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    const updatedInput = {
       ...input,
-      [e.target.name]: e.target.value,
-    });
-    setErrors(
-      validate({
-        ...input,
-        [e.target.name]: e.target.value,
-      })
-    );
+      [name]: value,
+    };
+    setInput(updatedInput);
+    setErrors(validate(updatedInput));
   };
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_SERVICE,
-        import.meta.env.VITE_TEMPLATE,
-        form.current,
-        import.meta.env.VITE_KEY
-      )
 
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log(form.current);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    e.target.reset();
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (form.current) {
+      emailjs
+        .sendForm(
+          import.meta.env.VITE_SERVICE as string,
+          import.meta.env.VITE_TEMPLATE as string,
+          form.current,
+          import.meta.env.VITE_KEY as string
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log(form.current);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      form.current.reset();
+    }
   };
 
   const notify = () => {
@@ -83,7 +88,7 @@ export default function Contact({ Language }) {
 
   return (
     <div className={styles.box}>
-      <section class="contact" id="contact">
+      <section className="contact" id="Contact">
         {Language === "English" ? (
           <div className={styles.divTitle}>
             <p className={styles.title}>Contact</p>
@@ -108,7 +113,7 @@ export default function Contact({ Language }) {
               name="user_name"
               placeholder="Name"
               autoComplete="off"
-              onChange={(e) => handleChange(e)}
+              onChange={handleChange}
             />
             {errors.user_name && (
               <p className={styles.danger}>{errors.user_name}</p>
@@ -119,18 +124,17 @@ export default function Contact({ Language }) {
               name="user_email"
               placeholder="Email"
               autoComplete="off"
-              onChange={(e) => handleChange(e)}
+              onChange={handleChange}
             />
             {errors.user_email && (
               <p className={styles.danger}>{errors.user_email}</p>
             )}
             <textarea
               className={styles.textTareaBox}
-              maxLength="1000"
-              type="text"
+              maxLength={1000}
               name="message"
               placeholder="Message..."
-              onChange={(e) => handleChange(e)}
+              onChange={handleChange}
             ></textarea>
             {errors.message && (
               <p className={styles.danger}>{errors.message}</p>
@@ -163,4 +167,6 @@ export default function Contact({ Language }) {
       </section>
     </div>
   );
-}
+};
+
+export default Contact;

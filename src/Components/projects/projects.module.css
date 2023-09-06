@@ -2,6 +2,8 @@
   width: 55%;
   margin: 10% 0px;
   padding-bottom: 5%;
+  opacity: 0;
+  animation: fade-in 1.5s ease-in forwards;
 }
 
 .title {
@@ -90,4 +92,10 @@
 .image {
   height: 60%;
   width: 40%;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }

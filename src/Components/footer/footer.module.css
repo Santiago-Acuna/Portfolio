@@ -4,6 +4,8 @@
   margin:0%;
   flex-direction:column;
   height: auto;
+  opacity: 0;
+  animation: fade-in 1.5s ease-in forwards;
 }
 .logoBox{
   display: flex;
@@ -37,5 +39,10 @@ margin:0%;
   
 }
 
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
 
 

@@ -1,16 +1,21 @@
-import React from "react";
-import CarouselItem from "./carouselItem.jsx";
-import CarouselIndicators from "./carouselIndicators.jsx";
+import React, { useState, useEffect, useRef } from "react";
+import CarouselItem from "./carouselItem";
+import CarouselIndicators from "./carouselIndicators";
 import styles from "./carousel.module.css";
-import { useState, useEffect, useRef } from "react";
 
-export default function Carousel({ slides }) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slideInterval = useRef();
+
+interface CarouselProps {
+  slides: string[];
+}
+
+const Carousel: React.FC<CarouselProps> = ({ slides }) => {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const slideInterval = useRef<NodeJS.Timeout | null>(null);
 
   const stopSlideTimer = () => {
     if (slideInterval.current) {
       clearInterval(slideInterval.current);
+      slideInterval.current = null;
     }
   };
 
@@ -22,7 +27,8 @@ export default function Carousel({ slides }) {
       );
     }, 3000);
   };
-  const switchIndex = (index) => {
+
+  const switchIndex = (index: number) => {
     startSlideTimer();
     setCurrentSlide(index);
   };
@@ -41,7 +47,6 @@ export default function Carousel({ slides }) {
       >
         {slides.map((slide, index) => (
           <CarouselItem
-            className={styles.carouselItem}
             slide={slide}
             key={index}
             stopSlide={stopSlideTimer}
@@ -56,4 +61,6 @@ export default function Carousel({ slides }) {
       />
     </div>
   );
-}
+};
+
+export default Carousel;
