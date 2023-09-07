@@ -9,7 +9,8 @@ import GIT from "../../Images/git.png";
 import POSTGRESQL from "../../Images/postgresql.png";
 import Redux from "../../Images/redux.png";
 import TypeScript from "../../Images/typescript.jpg";
-import {GlobalLanguageState} from "../../assets/GlobalStates/globalStates.tsx";
+import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
+import TranslateText from "../../assets/TranslateText/translateText.js";
 
 const Skills: React.FC = () => {
   const { Language } = useContext(GlobalLanguageState)!;
@@ -43,24 +44,18 @@ const Skills: React.FC = () => {
   return (
     <div className={styles.box}>
       <section className="skills" id="Skills">
-        {Language === "English" ? (
-          <div className={styles.divTitle}>
-            <p className={styles.title}>Skills</p>
-          </div>
-        ) : (
-          <div className={styles.divTitleE}>
-            <p className={styles.title}>Tecnologías</p>
-          </div>
-        )}
-        {Language === "English" ? (
-          <p className={styles.p1}>
-            // These are the technologies I've worked with
+        <div className={styles.divTitle}>
+          <p className={styles.title}>
+            <TranslateText English={"Skills"} Spanish={"Tecnologías"} />
           </p>
-        ) : (
-          <p className={styles.p1}>
-            // Estas son las tecnologías con las que he trabajado
-          </p>
-        )}
+        </div>
+
+        <p className={styles.p1}>
+          <TranslateText
+            English={"// These are the technologies I've worked with"}
+            Spanish={"// Estas son las tecnologías con las que he trabajado"}
+          />
+        </p>
 
         <div className={styles.skillsBox}>
           <SkillsIcons skill={HTML} name={"HTML"} />

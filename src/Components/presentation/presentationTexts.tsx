@@ -1,0 +1,7 @@
+export const urlPdf: string = "https://docs.google.com/document/d/1sL9xL-pYGjmSTp3GCIJDP5vN90EkAUqR/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true";
+
+export const urlPdfEnglish: string = "https://docs.google.com/document/d/1LkqivdIoy0TjAufJMU6Ij3x7obKgSOec/edit?usp=sharing&ouid=112890987113970473117&rtpof=true&sd=true";
+
+export const presentationEngish = "with the ability to build and optimize end-user-oriented web sites and applications in a scalable and modularized manner I love to investigate, solve problems, learn from others and teach, that is why in me you will find a developer with conflict resolution skills, willing to listen to ideas and contribute all my knowledge to achieve the proposed objectives.I have experience in JavaScript language, HTML, CSS and also in technologies like Node.js, Express, Sequelize, PostgreSQL, React.js, Redux..."
+
+export const presentationSpanish = "con la capacidad de construir y optimizar end-user-oriented web sites y aplicaciones de manera escalable y modularizada Me encanta investigar, resolver problemas, aprender de los demás y enseñar, es por eso que en mí encontrarás un desarrollador con habilidades de resolución de conflictos, dispuesto a escuchar ideas y aportar todo mi conocimiento para lograr las objetivos propuestos. Tengo experiencia en lenguaje JavaScript, HTML, CSS y también en tecnologías  como Node.js, Express, Sequelize, PostgreSQL, React.js, Redux..."

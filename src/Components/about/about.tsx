@@ -7,7 +7,7 @@ import {
   spanishAbout,
   textToIntroduceEnglish,
   textToIntroduceSpanish,
-} from "./aboutText.ts";
+} from "./aboutTexts.ts";
 
 const About: React.FC = () => {
   return (
