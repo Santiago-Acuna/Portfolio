@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./navbar.module.css";
-import {GlobalLanguageState,} from "../../assets/GlobalStates/globalStates.tsx";
+import {GlobalLanguageState} from "../../assets/GlobalStates/globalStates.tsx";
 import NavbarLi from "./navbarLi/navbarLi";
 
 const NavBar: React.FC = () => {
