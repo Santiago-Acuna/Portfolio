@@ -21,7 +21,7 @@ const Presentation: React.FC = () => {
           />
         </p>
         <p className={styles.p2}>Santiago Acuña</p>
-        <p className={styles.p1}>
+        <p className={styles.p3}>
           <TranslateText
             English={"I'm a Full Stack Developer"}
             Spanish={"Hola, mi nombre es"}

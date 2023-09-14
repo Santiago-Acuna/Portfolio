@@ -34,3 +34,9 @@
     opacity: 1;
   }
 }
+@media (max-width: 800px) {
+  .box{
+    display: none;
+    pointer-events: none; 
+  }
+}

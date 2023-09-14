@@ -11,6 +11,7 @@ import Redux from "../../Images/redux.png";
 import TypeScript from "../../Images/typescript.jpg";
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 import TranslateText from "../../assets/TranslateText/translateText.js";
+import Title from "../../assets/title/title.tsx";
 
 const Skills: React.FC = () => {
   const { Language } = useContext(GlobalLanguageState)!;
@@ -44,11 +45,7 @@ const Skills: React.FC = () => {
   return (
     <div className={styles.box}>
       <section className="skills" id="Skills">
-        <div className={styles.divTitle}>
-          <p className={styles.title}>
-            <TranslateText English={"Skills"} Spanish={"Tecnologías"} />
-          </p>
-        </div>
+        <Title English={"Skills"} Spanish={"Tecnologías"} />
 
         <p className={styles.p1}>
           <TranslateText

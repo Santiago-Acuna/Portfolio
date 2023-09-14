@@ -5,6 +5,7 @@ import hype from "../../Images/hype shop.jpg";
 import TranslateText from "../../assets/TranslateText/translateText.js";
 import ProjectsMold from "./projectsUtils.tsx";
 import { recipesSumary, hypeShopSumary } from "./projectsResume.ts";
+import Title from "../../assets/title/title.tsx";
 
 const urlRecipesGithub = "https://github.com/Santiago-Acuna/Recipes";
 const urlRecipes = "https://pi-food-vercel.vercel.app/";
@@ -15,16 +16,16 @@ const Projects: React.FC = () => {
   return (
     <div className={styles.box}>
       <section className="projects" id="Projects">
-        <p className={styles.title}>
-          <TranslateText English={"Projects"} Spanish={"Proyectos"} />
-        </p>
+        <Title English={"Projects"} Spanish={"Proyectos"} />
         <p className={styles.p1}>
           <TranslateText
             English={"// Check out some of my recent work"}
             Spanish={"// Mira algunos de mis proyectos más recientes"}
           />
+          
         </p>
         <ProjectsMold
+          name={"Recipes"}
           imgPrime={recipes}
           urlGithub={urlRecipesGithub}
           urlDeploy={urlRecipes}
@@ -33,6 +34,7 @@ const Projects: React.FC = () => {
         />
 
         <ProjectsMold
+          name={"Hype Shop"}
           imgPrime={hype}
           urlGithub={urlHypeGithub}
           urlDeploy={urlHype}

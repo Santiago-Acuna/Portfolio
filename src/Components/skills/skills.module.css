@@ -3,6 +3,8 @@
   margin: 10% 0px;
   opacity: 0;
   animation: fade-in 1.5s ease-in forwards;
+  flex-direction: column;
+  align-content: space-between;
 }
 
 .skillsBox {

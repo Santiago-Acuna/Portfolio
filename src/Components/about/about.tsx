@@ -13,7 +13,7 @@ const About: React.FC = () => {
   return (
     <div className={styles.box}>
       <section className="about" id="About">
-        <Title English="About me" Spanish="Sobre mi" />
+        <Title English="About me" Spanish="Sobre mí" />
         <p className={styles.p1}>
           <TranslateText
             English={textToIntroduceEnglish}

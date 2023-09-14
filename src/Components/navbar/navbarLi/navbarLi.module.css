@@ -2,3 +2,8 @@
   cursor:pointer;
   color: #f9b82c;
 }
+
+.NavbarLi{
+  margin:  0 1%;
+  align-items: end
+}

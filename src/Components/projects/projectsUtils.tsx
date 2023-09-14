@@ -12,6 +12,7 @@ interface ImgLinkProps {
 }
 
 interface ProjectsMold {
+  name:string;
   urlGithub: string;
   urlDeploy: string;
   imgPrime: string;
@@ -39,6 +40,7 @@ const ImgLink: React.FC<ImgLinkProps> = ({ img1, img2, url }) => {
 };
 
 const ProjectsMold: React.FC<ProjectsMold> = ({
+  name,
   imgPrime,
   urlGithub,
   urlDeploy,
@@ -47,7 +49,7 @@ const ProjectsMold: React.FC<ProjectsMold> = ({
 }) => {
   return (
     <div>
-      <p className={styles.proyectTitle}>Recipes App</p>
+      <p className={styles.proyectTitle}>{`${name} App`}</p>
       <div className={styles.mainContent}>
         <img
           className={styles.img1}
