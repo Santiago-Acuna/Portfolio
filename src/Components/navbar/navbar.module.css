@@ -82,6 +82,7 @@
     display: flex;
     list-style-type: none;
     color: #d0d4da;
+    overflow-y: hidden;
   }
 
   .closeMenu {

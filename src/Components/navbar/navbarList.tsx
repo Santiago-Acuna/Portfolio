@@ -9,7 +9,6 @@ interface ComputerNavBarProps {
   menuType: string;
   closeMenu: React.MouseEventHandler<HTMLElement>;
 }
-// hacer navbar list
 const NavbarList = ({ menuType, closeMenu }: ComputerNavBarProps) => {
   const { setLanguage } = useContext(GlobalLanguageState)!;
   return (
