@@ -7,7 +7,7 @@
   align-content: space-between;
 }
 
-.skillsBox {
+.TechnologiesBox {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-top: 2rem;
@@ -18,7 +18,7 @@
   color: white;
 }
 
-.skills {
+.Technologies {
   padding: 2.5rem 0.3rem;
 
   transition-duration: 1000ms;
@@ -26,7 +26,7 @@
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.skills:hover {
+.Technologies:hover {
   height: 105%;
   width: 105%;
 }
@@ -34,32 +34,19 @@
 .image {
   margin-left: auto;
   margin-right: auto;
+  height: auto;
   width: 5rem;
   background-color: #0a192f;
 }
+ .otherImage{
+  height: auto  ;
+  width: auto ;  
+  margin-left: auto;
+  margin-right: auto;
+  width: 5.5rem;
+  background-color: #0a192f;
 
-.title {
-  font-weight: 700;
-  color: white;
-  font-size: 3rem;
-}
-
-.divTitle {
-  padding: 0px;
-  border-bottom: 0.3em solid;
-  border-color: #b1205a;
-  display: block;
-  width: 15%;
-  margin: 5% 0px;
-}
-.divTitleE {
-  padding: 0px;
-  border-bottom: 0.3em solid;
-  border-color: #b1205a;
-  display: block;
-  width: 32%;
-  margin: 5% 0px;
-}
+} 
 
 .p1 {
   color: #f9b82c;

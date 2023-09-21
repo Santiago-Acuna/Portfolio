@@ -33,12 +33,12 @@ const InfinityScrollComponentsHandler = ({
     isThere && element && element.scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
   }
 
-  isThere && element && setTimeout(scrollToElement, 200)
+  isThere && element && setTimeout(scrollToElement, 300)
 
   if (IsVisible.component === "no" && !isThere) {
     const newComponent = AllComponents && AllComponents.shift();
     setAllComponents(AllComponents);
-    console.log(AllComponents);
+    // console.log(AllComponents);
     newComponent &&
       setComponents((prevComponents) => [...prevComponents, newComponent]);
     setIsVisible({ ...IsVisible, component: "no" });

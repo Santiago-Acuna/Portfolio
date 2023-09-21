@@ -4,6 +4,8 @@ import redirectButtonWhite from "../../Images/redirect button white.png";
 import redirectButtonRose from "../../Images/redirect button rose.png";
 import styles from "./projects.module.css";
 import TranslateText from "../../assets/TranslateText/translateText.js";
+import { startRandomColorEffect } from "../../assets/RandomColor/randomColor";
+import isElementVisibleOnScroll from "../../assets/IsOnScreen/IsOnScreen";
 
 interface ImgLinkProps {
   img1: string;
@@ -12,12 +14,13 @@ interface ImgLinkProps {
 }
 
 interface ProjectsMold {
-  name:string;
+  name: string;
   urlGithub: string;
   urlDeploy: string;
   imgPrime: string;
   projectSumaryEnglish: string;
   projectSumaryEspanish: string;
+  proyectsTechnologies: Array<string>;
 }
 
 const ImgLink: React.FC<ImgLinkProps> = ({ img1, img2, url }) => {
@@ -39,6 +42,60 @@ const ImgLink: React.FC<ImgLinkProps> = ({ img1, img2, url }) => {
   );
 };
 
+interface backgroundColorOnProps {
+  proyectsTechnologies: Array<string>;
+  name : string
+}
+
+const backgroundColorOn = async ({
+  proyectsTechnologies,
+   name
+}: backgroundColorOnProps) => {
+  const skillsGrid = document.getElementById("Technologies");
+  const technologiesButton = document.getElementById("technologiesButtonOfProject" + name)
+  skillsGrid &&
+    skillsGrid.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "start",
+    });
+
+  if (proyectsTechnologies) {
+    for (const element of proyectsTechnologies) {
+      const Technology = element && document.getElementById(element);
+      if (Technology) {
+        await new Promise((resolve) => {
+          setTimeout(() => {
+            isElementVisibleOnScroll(element).then((result) => {
+              result.isElementVisible === false &&
+                Technology.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                  inline: "start",
+                });
+            });
+
+            resolve(startRandomColorEffect(Technology));
+          }, 1000);
+        });
+        
+      }
+    }
+    technologiesButton && console.log("hola")
+    await new Promise((resolve) => {
+      technologiesButton && console.log("hola")
+      setTimeout(() => {
+        technologiesButton && console.log("hola")
+        technologiesButton && resolve(technologiesButton.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "start",
+        }));
+      }, 1000);
+    });
+  }
+};
+
 const ProjectsMold: React.FC<ProjectsMold> = ({
   name,
   imgPrime,
@@ -46,39 +103,48 @@ const ProjectsMold: React.FC<ProjectsMold> = ({
   urlDeploy,
   projectSumaryEnglish,
   projectSumaryEspanish,
+  proyectsTechnologies,
 }) => {
+  const backgroundColorOnHook: React.MouseEventHandler<HTMLButtonElement> = (
+    e
+  ) => {
+    e.preventDefault();
+    backgroundColorOn({ proyectsTechnologies, name });
+  };
   return (
-    <div>
+    <div className={styles.projectsMoldBox}>
       <p className={styles.proyectTitle}>{`${name} App`}</p>
-      <div className={styles.mainContent}>
+      <div className={styles.imgAndProjectsUrls}>
         <img
           className={styles.img1}
           src={imgPrime}
           alt={`${projectSumaryEnglish} img`}
         />
-        <div className={styles.description}>
-          <div className={styles.summary}>
-            <p className="">
-              <TranslateText
-                English={projectSumaryEnglish}
-                Spanish={projectSumaryEspanish}
-              />
-            </p>
-          </div>
-          <p className={styles.p2}>
-            React Redux Css Nodejs Express Sequelize.js PostgreSQL Spoonacular
-            API
-          </p>
-          <div></div>
+        <div className={styles.divA}>
+          <ImgLink img1={githubIcon} img2={githubIconRosa} url={urlGithub} />
+          <ImgLink
+            img1={redirectButtonWhite}
+            img2={redirectButtonRose}
+            url={urlDeploy}
+          />
         </div>
       </div>
-      <div className={styles.diva}>
-        <ImgLink img1={githubIcon} img2={githubIconRosa} url={urlGithub} />
-        <ImgLink
-          img1={redirectButtonWhite}
-          img2={redirectButtonRose}
-          url={urlDeploy}
-        />
+      <div className={styles.description}>
+        <div className={styles.summary}>
+          <p>
+            <TranslateText
+              English={projectSumaryEnglish}
+              Spanish={projectSumaryEspanish}
+            />
+          </p>
+        </div>
+        <button className={styles.technologies} onClick={backgroundColorOnHook} id = {`technologiesButtonOfProject${name}`}>
+          <TranslateText English={"Technologies"} Spanish={"Tecnologías"} />
+        </button>
+        {/* <p className={styles.p2}>
+            React Redux Css Nodejs Express Sequelize.js PostgreSQL Spoonacular
+            API
+          </p> */}
       </div>
     </div>
   );

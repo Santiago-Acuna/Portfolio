@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./App.module.css";
 import Navbar from "./Components/navbar/navbar";
 import About from "./Components/about/about.tsx";
-import Skills from "./Components/skills/skills.tsx";
+import Technologies from "./Components/skills/skills.tsx";
 import Contact from "./Components/contact/contact.tsx";
 import Projects from "./Components/projects/projects.tsx";
 import Certificates from "./Components/certificates/certificates.tsx";
@@ -25,7 +25,7 @@ const App: React.FC = () => {
   );
   const [AllComponents, setAllComponents] = useState<Array<React.FC>>([
     About,
-    Skills,
+    Technologies,
     Certificates,
     Projects,
     Contact,

@@ -9,11 +9,14 @@ import GIT from "../../Images/git.png";
 import POSTGRESQL from "../../Images/postgresql.png";
 import Redux from "../../Images/redux.png";
 import TypeScript from "../../Images/typescript.jpg";
+import Sequalize from "../../Images/sequalize.png";
+import SQL from "../../Images/sql ahora si tamaño.png";
+import MongoDB from "../../Images/icons8-mongodb-300.png";
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 import TranslateText from "../../assets/TranslateText/translateText.js";
 import Title from "../../assets/title/title.tsx";
 
-const Skills: React.FC = () => {
+const Technologies: React.FC = () => {
   const { Language } = useContext(GlobalLanguageState)!;
   const SkillsIcons: React.FC<{ skill: string; name: string }> = ({
     skill,
@@ -23,12 +26,18 @@ const Skills: React.FC = () => {
     const learning = "(learning)";
     const aprendiendo = "(aprendiendo)";
     return (
-      <div className={styles.skills}>
-        <img
+      <div className={styles.Technologies} id={`${name}`}>
+        { name !== "MongoDB" && <img
           className={styles.image}
           src={skill}
           alt={`${skill.toString().slice(19, -4).toUpperCase()} icon`}
         />
+    }
+        { name == "MongoDB" && <img
+          className={styles.otherImage}
+          src={skill}
+          alt={`${skill.toString().slice(19, -4).toUpperCase()} icon`}
+        />}
         <p>
           {Language === "English"
             ? skillName === "TYPESCRIPT"
@@ -44,8 +53,8 @@ const Skills: React.FC = () => {
 
   return (
     <div className={styles.box}>
-      <section className="skills" id="Skills">
-        <Title English={"Skills"} Spanish={"Tecnologías"} />
+      <section className="c" id="Technologies">
+        <Title English={"Technologies"} Spanish={"Tecnologías"} />
 
         <p className={styles.p1}>
           <TranslateText
@@ -54,7 +63,7 @@ const Skills: React.FC = () => {
           />
         </p>
 
-        <div className={styles.skillsBox}>
+        <div className={styles.TechnologiesBox}>
           <SkillsIcons skill={HTML} name={"HTML"} />
           <SkillsIcons skill={CSS} name={"CSS"} />
           <SkillsIcons skill={JAVASCRIPT} name={"JAVASCRIPT"} />
@@ -62,12 +71,15 @@ const Skills: React.FC = () => {
           <SkillsIcons skill={NODE} name={"NODE"} />
           <SkillsIcons skill={GIT} name={"GIT"} />
           <SkillsIcons skill={POSTGRESQL} name={"POSTGRESQL"} />
-          <SkillsIcons skill={Redux} name={"Redux"} />
+          <SkillsIcons skill={Redux} name={"REDUX"} />
           <SkillsIcons skill={TypeScript} name={"TypeScript"} />
+          <SkillsIcons skill={SQL} name={"SQL"} />
+          <SkillsIcons skill={Sequalize} name={"Sequalize"} />
+          <SkillsIcons skill={MongoDB} name={"MongoDB"} />
         </div>
       </section>
     </div>
   );
 };
 
-export default Skills;
+export default Technologies;

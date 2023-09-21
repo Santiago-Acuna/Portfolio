@@ -1,38 +1,23 @@
 .box {
-  width: 55%;
+  width: 65%;
   margin: 10% 0px;
   padding-bottom: 5%;
   opacity: 0;
   animation: fade-in 1.5s ease-in forwards;
 }
-
-.title {
-  font-weight: 700;
-  color: white;
-  font-size: 3rem;
-  padding: 0px;
-  margin: 0px;
-}
-
-.divTitle {
-  padding: 0px;
-  border-bottom: 0.3em solid;
-  border-color: #b1205a;
-  display: block;
-  width: 22%;
-  margin: 5% 0px;
-}
-.divTitleE {
-  padding: 0px;
-  border-bottom: 0.3em solid;
-  border-color: #b1205a;
-  display: block;
-  width: 27%;
-  margin: 5% 0px;
-}
-
 .p1 {
   color: #f9b82c;
+}
+.projectsMoldBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.imgAndProjectsUrls {
+  display: flex;
+  flex-direction: row;
 }
 
 .proyectTitle {
@@ -42,31 +27,39 @@
   margin: 3% 0px;
 }
 
+.description{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+}
+
 .summary {
   background-color: #112240;
-  width: 50%;
+  width: 45%;
   text-align: justify;
   text-justify: inter-word;
   color: #d0d4da;
   padding: 1.5% 2%;
   border-radius: 5px;
-  font-size: 0.8em;
+  font-size: 1em;
   position: relative;
   display: flex;
+}
+.technologies{
+  margin-left: 2%;
+  width: 30%;
+  font-size: 2.2em;
+  height: 100%;
+  /* background-color: red; */
+  border-radius: 10px;
+  padding: 3%;
+  animation: changeColor 2s linear infinite alternate;
 }
 
 .img1 {
-  height: 130%;
-  width: 60%;
-  position: absolute;
-  right: -5%;
-  top: -20%;
+  height: 100%;
+  width: 80%;
   border-radius: 5px;
-}
-
-.mainContent {
-  display: flex;
-  position: relative;
 }
 
 .p2 {
@@ -77,25 +70,49 @@
   margin: 3% 0px;
 }
 
-.diva {
-  margin: 0%;
+.divA {
+  margin-left: 2%;
   padding: 0%;
-  width: 25%;
-  height: 50%;
+  width: 10%;
+  height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin-top: 5%;
 }
 .a1 {
   padding: 0%;
+  margin: 0%;
 }
 
 .image {
-  height: 60%;
-  width: 40%;
+  height: 40%;
+  width: 80%;
+  margin:25% 0
 }
 
 @keyframes fade-in {
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+      background-color: red;
+  }
+  20%{
+    background-color: green;
+  }
+  40% {
+    background-color: yellow;
+}
+60% {
+  background-color: orange;
+}
+80% {
+  background-color: rgb(247, 0, 255);
+}
+  100% {
+      background-color: blue;
   }
 }

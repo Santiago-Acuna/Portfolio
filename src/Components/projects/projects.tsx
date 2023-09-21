@@ -9,8 +9,9 @@ import Title from "../../assets/title/title.tsx";
 
 const urlRecipesGithub = "https://github.com/Santiago-Acuna/Recipes";
 const urlRecipes = "https://pi-food-vercel.vercel.app/";
-const urlHypeGithub = "https://github.com/Santiago-Acuna/Hype-Shop";
-const urlHype = "https://hype-kappa.vercel.app/";
+// const urlHypeGithub = "https://github.com/Santiago-Acuna/Hype-Shop";
+// const urlHype = "https://hype-kappa.vercel.app/";
+const proyectsTechnologiesProjectOne=["HTML", "CSS", "JAVASCRIPT","NODE", "REACT", "REDUX", "MongoDB", "Express", "Sequelize.js","PostgreSQL"]
 
 const Projects: React.FC = () => {
   return (
@@ -31,16 +32,17 @@ const Projects: React.FC = () => {
           urlDeploy={urlRecipes}
           projectSumaryEnglish={recipesSumary}
           projectSumaryEspanish={recipesSumary}
+          proyectsTechnologies={proyectsTechnologiesProjectOne}
         />
 
-        <ProjectsMold
+        {/* <ProjectsMold
           name={"Hype Shop"}
           imgPrime={hype}
           urlGithub={urlHypeGithub}
           urlDeploy={urlHype}
           projectSumaryEnglish={hypeShopSumary}
           projectSumaryEspanish={hypeShopSumary}
-        />
+        /> */}
       </section>
     </div>
   );

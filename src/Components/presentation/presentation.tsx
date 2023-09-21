@@ -9,8 +9,12 @@ import {
 } from "./presentationTexts.tsx";
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 
+
 const Presentation: React.FC = () => {
   const { Language } = useContext(GlobalLanguageState)!;
+
+    
+  
   return (
     <div className={styles.box}>
       <section id="Presentation">

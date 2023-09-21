@@ -40,9 +40,9 @@ const NavbarList = ({ menuType, closeMenu }: ComputerNavBarProps) => {
         closeMenu={closeMenu}
       />
       <NavbarLi
-        English="Skills"
+        English="Technologies"
         Spanish="Tecnologías"
-        id="Skills"
+        id="Technologies"
         closeMenu={closeMenu}
       />
       <NavbarLi
