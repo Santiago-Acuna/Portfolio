@@ -11,8 +11,8 @@ import Redux from "../../Images/redux.png";
 import TypeScript from "../../Images/typescript.jpg";
 import Sequalize from "../../Images/sequalize si.png";
 import SQL from "../../Images/sql si.png";
-import MongoDB from "../../Images/Mongodb si.png";
 import Express from "../../Images/express si.png"
+// import MongoDB from "../../Images/Mongodb si.png";
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 import TranslateText from "../../assets/TranslateText/translateText.js";
 import Title from "../../assets/title/title.tsx";
@@ -77,7 +77,7 @@ const Technologies: React.FC = () => {
           <SkillsIcons skill={Express} name={"Express"} />
           <SkillsIcons skill={TypeScript} name={"TypeScript"} />
           <SkillsIcons skill={Sequalize} name={"Sequalize"} />
-          <SkillsIcons skill={MongoDB} name={"MongoDB"} />
+          {/* <SkillsIcons skill={MongoDB} name={"MongoDB"} /> */}
         </div>
       </section>
     </div>

@@ -9,9 +9,12 @@ import Title from "../../assets/title/title.tsx";
 
 const urlRecipesGithub = "https://github.com/Santiago-Acuna/Recipes";
 const urlRecipes = "https://pi-food-vercel.vercel.app/";
-// const urlHypeGithub = "https://github.com/Santiago-Acuna/Hype-Shop";
-// const urlHype = "https://hype-kappa.vercel.app/";
-const proyectsTechnologiesProjectOne=["HTML", "CSS", "JAVASCRIPT","NODE", "REACT", "REDUX", "MongoDB", "Express", "Sequelize.js","PostgreSQL"]
+const urlHypeGithub = "https://github.com/Santiago-Acuna/Hype-Shop";
+const urlHype = "https://hype-kappa.vercel.app/";
+const proyectsTechnologiesProjectRecipes=["HTML", "CSS", "JAVASCRIPT","NODE", "REACT", "REDUX",  "Express", "Sequelize.js","PostgreSQL", "SQL"]
+
+const proyectsTechnologiesProjectHypeShop=["HTML", "CSS", "JAVASCRIPT","NODE", "REACT", "REDUX", "Express", "Sequelize.js","PostgreSQL", "SQL","GIT"]
+
 
 const Projects: React.FC = () => {
   return (
@@ -32,17 +35,18 @@ const Projects: React.FC = () => {
           urlDeploy={urlRecipes}
           projectSumaryEnglish={recipesSumary}
           projectSumaryEspanish={recipesSumary}
-          proyectsTechnologies={proyectsTechnologiesProjectOne}
+          proyectsTechnologies={proyectsTechnologiesProjectRecipes}
         />
 
-        {/* <ProjectsMold
+        <ProjectsMold
           name={"Hype Shop"}
           imgPrime={hype}
           urlGithub={urlHypeGithub}
           urlDeploy={urlHype}
           projectSumaryEnglish={hypeShopSumary}
           projectSumaryEspanish={hypeShopSumary}
-        /> */}
+          proyectsTechnologies={proyectsTechnologiesProjectHypeShop}
+        />
       </section>
     </div>
   );

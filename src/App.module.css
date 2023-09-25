@@ -32,6 +32,10 @@ a:link {
 section[id]{
   scroll-margin-top: 50px;
 }
+div[id]{
+  scroll-margin-top: 70px;
+}
+
 
 @keyframes fade-in {
   100% {
