@@ -3,50 +3,52 @@
   margin: 10% 0px;
   opacity: 0;
   animation: fade-in 1.5s ease-in forwards;
+  display: flex;
   flex-direction: column;
-  align-content: space-between;
 }
 
 .TechnologiesBox {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
   padding-top: 2rem;
   padding-bottom: 2rem;
   text-align: center;
   gap: 1rem;
-  width: 100%;
+  width: 110%;
   color: white;
 }
 
 .Technologies {
-  padding: 2.5rem 0.3rem;
-
-  transition-duration: 1000ms;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.3rem;
+  padding-top: 1rem;
+  align-items: center;
+  transition-duration: 100ms;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: 90%;
 }
 
 .Technologies:hover {
-  height: 105%;
-  width: 105%;
+  height: 100%;
+  width: 100%;
 }
 
 .image {
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  width: 5rem;
-  background-color: #0a192f;
+  width: 90%;
+  height: 90%;
+  margin-bottom: 10%;
 }
- .otherImage{
-  height: auto  ;
-  width: auto ;  
-  margin-left: auto;
-  margin-right: auto;
-  width: 5.5rem;
-  background-color: #0a192f;
-
-} 
+.otherImage {
+  width: 100%;
+  height: 50%;
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+.skillName {
+  font-size: 1.2em;
+}
 
 .p1 {
   color: #f9b82c;
@@ -57,4 +59,3 @@
     opacity: 1;
   }
 }
-

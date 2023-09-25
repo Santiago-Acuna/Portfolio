@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./certificates.module.css";
 import Carousel from "./carousel/carousel";
 import HenryCertificate from "../../Images/Henry certificate.png";
-import EFCertificate from "../../Images/EF certificate ph.png";
+import EFCertificate from "../../Images/EF certificate.png";
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 
 const Certificates: React.FC = () => {

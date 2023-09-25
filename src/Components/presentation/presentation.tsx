@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import styles from "./presentation.module.css";
 import TranslateText from "../../assets/TranslateText/translateText.js";
 import {
@@ -9,12 +9,9 @@ import {
 } from "./presentationTexts.tsx";
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 
-
 const Presentation: React.FC = () => {
   const { Language } = useContext(GlobalLanguageState)!;
 
-    
-  
   return (
     <div className={styles.box}>
       <section id="Presentation">

@@ -9,9 +9,10 @@ import GIT from "../../Images/git.png";
 import POSTGRESQL from "../../Images/postgresql.png";
 import Redux from "../../Images/redux.png";
 import TypeScript from "../../Images/typescript.jpg";
-import Sequalize from "../../Images/sequalize.png";
-import SQL from "../../Images/sql ahora si tamaño.png";
-import MongoDB from "../../Images/icons8-mongodb-300.png";
+import Sequalize from "../../Images/sequalize si.png";
+import SQL from "../../Images/sql si.png";
+import MongoDB from "../../Images/Mongodb si.png";
+import Express from "../../Images/express si.png"
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 import TranslateText from "../../assets/TranslateText/translateText.js";
 import Title from "../../assets/title/title.tsx";
@@ -27,18 +28,18 @@ const Technologies: React.FC = () => {
     const aprendiendo = "(aprendiendo)";
     return (
       <div className={styles.Technologies} id={`${name}`}>
-        { name !== "MongoDB" && <img
+         { name !== "Express" &&<img
           className={styles.image}
           src={skill}
           alt={`${skill.toString().slice(19, -4).toUpperCase()} icon`}
         />
-    }
-        { name == "MongoDB" && <img
+  }
+        { name == "Express" && <img
           className={styles.otherImage}
           src={skill}
           alt={`${skill.toString().slice(19, -4).toUpperCase()} icon`}
         />}
-        <p>
+        <p className={styles.skillName}>
           {Language === "English"
             ? skillName === "TYPESCRIPT"
               ? skillName + " " + learning
@@ -72,8 +73,9 @@ const Technologies: React.FC = () => {
           <SkillsIcons skill={GIT} name={"GIT"} />
           <SkillsIcons skill={POSTGRESQL} name={"POSTGRESQL"} />
           <SkillsIcons skill={Redux} name={"REDUX"} />
+           <SkillsIcons skill={SQL} name={"SQL"} />
+          <SkillsIcons skill={Express} name={"Express"} />
           <SkillsIcons skill={TypeScript} name={"TypeScript"} />
-          <SkillsIcons skill={SQL} name={"SQL"} />
           <SkillsIcons skill={Sequalize} name={"Sequalize"} />
           <SkillsIcons skill={MongoDB} name={"MongoDB"} />
         </div>
