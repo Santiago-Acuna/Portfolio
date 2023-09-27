@@ -7,12 +7,13 @@
 }
 .p1 {
   color: #f9b82c;
+  font-size: 1.2rem;
 }
 .projectsMoldBox {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* background-color: red; */
+  margin-top: 2%;
 }
 
 .imgAndProjectsUrls {
@@ -23,7 +24,7 @@
 .proyectTitle {
   color: white;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin: 3% 0px;
 }
 
@@ -47,13 +48,13 @@
 }
 .technologies{
   margin-left: 2%;
-  width: 30%;
   font-size: 2.2em;
   height: 100%;
   /* background-color: red; */
   border-radius: 10px;
-  padding: 3%;
+  padding: 2%;
   animation: changeColor 2s linear infinite alternate;
+  color: white;
 }
 
 .img1 {
@@ -114,5 +115,11 @@
 }
   100% {
       background-color: blue;
+  }
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 100%;
   }
 }

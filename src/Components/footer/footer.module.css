@@ -46,3 +46,8 @@ margin:0%;
 }
 
 
+@media (max-width: 800px) {
+  .box {
+    width: 60%;
+  }
+}

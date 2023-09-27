@@ -18,22 +18,6 @@
   background-color: red;
 }
 
-.divTitle {
-  padding: 0px;
-  border-bottom: 0.3em solid;
-  border-color: #b1205a;
-  display: block;
-  /* width: min-content; */
-}
-.divTitleE {
-  padding: 0px;
-  border-bottom: 0.3em solid;
-  border-color: #b1205a;
-  display: block;
-  width: 25%;
-  margin: 5% 0px;
-  
-}
 .p1 {
   font-weight: 700;
   font-size: 2.5em;
@@ -48,5 +32,11 @@
 @keyframes fade-in {
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 100%;
   }
 }

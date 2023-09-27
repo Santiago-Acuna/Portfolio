@@ -17,23 +17,6 @@
   margin: 0px;
 }
 
-.divTitle {
-  padding: 0px;
-  border-bottom: 0.3em solid;
-  border-color: #b1205a;
-  display: block;
-  width: 30%;
-  margin: 10% 0px;
-}
-
-.divTitleE {
-  padding: 0px;
-  border-bottom: 0.3em solid;
-  border-color: #b1205a;
-  display: block;
-  width: 33%;
-  margin: 10% 0px;
-}
 .container {
   display: flex;
   align-items: center;
@@ -43,5 +26,10 @@
 @keyframes fade-in {
   100% {
     opacity: 1;
+  }
+}
+@media (max-width: 800px) {
+  .box {
+    width: 100%;
   }
 }

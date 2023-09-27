@@ -52,10 +52,20 @@
 
 .p1 {
   color: #f9b82c;
+  font-size: 1.2rem;
 }
 
 @keyframes fade-in {
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .box {
+    width: 100%;
+  }
+  .TechnologiesBox {
+    width: 90%;
   }
 }
