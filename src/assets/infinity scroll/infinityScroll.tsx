@@ -8,7 +8,7 @@ import {
 import InfinityScrollComponentsHandler from "./infinityScrollComponentsHandler.tsx";
 
 const InfinityScrollComponent: React.FC = () => {
-  const { Components, setComponents } = useContext(
+  const { setComponents, Components } = useContext(
     GlobalVisibleComponentsState
   )!;
   const { AllComponents, setAllComponents } = useContext(
@@ -20,7 +20,6 @@ const InfinityScrollComponent: React.FC = () => {
     InfinityScrollComponentsHandler({
       AllComponents,
       setAllComponents,
-      Components,
       setComponents,
       IsVisible,
       setIsVisible,
@@ -29,7 +28,7 @@ const InfinityScrollComponent: React.FC = () => {
 
   useEffect(() => {
     IsVisible.component === "no" && handleScroll();
-  }, [IsVisible]);
+  }, [IsVisible, Components]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
