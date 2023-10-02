@@ -4,7 +4,7 @@ import recipes from "../../Images/Home.jpg";
 import hype from "../../Images/hype shop.jpg";
 import TranslateText from "../../assets/TranslateText/translateText.js";
 import ProjectsMold from "./projectsUtils.tsx";
-import { recipesSumary, hypeShopSumary } from "./projectsResume.ts";
+import { recipesSumary, recipesSumarySpanish, hypeShopSumary, hypeShopSumarySpanish  } from "./projectsResume.ts";
 import Title from "../../assets/title/title.tsx";
 
 const urlRecipesGithub = "https://github.com/Santiago-Acuna/Recipes";
@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
           urlGithub={urlRecipesGithub}
           urlDeploy={urlRecipes}
           projectSumaryEnglish={recipesSumary}
-          projectSumaryEspanish={recipesSumary}
+          projectSumaryEspanish={recipesSumarySpanish}
           proyectsTechnologies={proyectsTechnologiesProjectRecipes}
         />
 
@@ -44,7 +44,7 @@ const Projects: React.FC = () => {
           urlGithub={urlHypeGithub}
           urlDeploy={urlHype}
           projectSumaryEnglish={hypeShopSumary}
-          projectSumaryEspanish={hypeShopSumary}
+          projectSumaryEspanish={hypeShopSumarySpanish}
           proyectsTechnologies={proyectsTechnologiesProjectHypeShop}
         />
       </section>
