@@ -55,6 +55,7 @@
   padding: 2%;
   animation: changeColor 2s linear infinite alternate;
   color: white;
+  cursor: pointer;
 }
 
 .img1 {
