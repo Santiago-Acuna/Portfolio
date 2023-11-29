@@ -9,9 +9,9 @@ import GIT from "../../Images/git.png";
 import POSTGRESQL from "../../Images/postgresql.png";
 import Redux from "../../Images/redux.png";
 import TypeScript from "../../Images/typescript.jpg";
-import Sequalize from "../../Images/sequalize si.png";
+import Sequalize from "../../Images/sequalize.png";
 import SQL from "../../Images/sql si.png";
-import Express from "../../Images/express si.png"
+import Express from "../../Images/express-svgrepo-com.svg"
 // import MongoDB from "../../Images/Mongodb si.png";
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 import TranslateText from "../../assets/TranslateText/translateText.js";
@@ -75,8 +75,8 @@ const Technologies: React.FC = () => {
           <SkillsIcons skill={Redux} name={"REDUX"} />
            <SkillsIcons skill={SQL} name={"SQL"} />
           <SkillsIcons skill={Express} name={"Express"} />
-          <SkillsIcons skill={TypeScript} name={"TypeScript"} />
           <SkillsIcons skill={Sequalize} name={"Sequalize"} />
+          <SkillsIcons skill={TypeScript} name={"TypeScript"} />
           {/* <SkillsIcons skill={MongoDB} name={"MongoDB"} /> */}
         </div>
       </section>

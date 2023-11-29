@@ -36,15 +36,15 @@
 }
 
 .image {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   margin-bottom: 10%;
 }
 .otherImage {
   width: 100%;
-  height: 50%;
-  margin-top: 25%;
-  margin-bottom: 25%;
+  height: 100%;
+  /* margin-top: 25%; */
+  /* margin-bottom: 25%; */
 }
 .skillName {
   font-size: 1.2em;
