@@ -1,33 +1,44 @@
 .box {
   grid-column: 1/2;
   grid-row: 2/3;
-  height: 45%;
-  width: 3%;
+  height: 50%;
+  width: auto;
   flex-direction: column;
-  bottom: 0%;
+  bottom: 5%;
   left: 0%;
   position: fixed;
   opacity: 0;
   animation: fade-in 1.5s ease-in forwards;
+  margin-left: 0.5%;
 }
 
 .image {
-  height: 30px;
-  width: 30px;
-  margin: 10%;
+  height: 50px;
+  width: 50px;
+  margin: 5% 10%;
+  display: block;
+
 }
 
 .verticalBar {
-  height: 70%;
-  width: 40%;
-  border-right: 0.2em solid;
+  height: 500px;
+  width: 50%;
+  border-right: 0.4em solid;
   border-color: #c58028;
-  display: block;
+  margin-left: 10%;
 }
 @keyframes fade-in {
   100% {
     opacity: 1;
   }
+}
+
+@media (max-width: 1200px) {
+  .image {
+    height: 40px;
+    width: 40px;
+  }
+  
 }
 
 @media (max-width: 800px) {
