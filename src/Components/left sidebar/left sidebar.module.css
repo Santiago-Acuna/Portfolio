@@ -1,10 +1,10 @@
 .box {
   grid-column: 1/2;
   grid-row: 2/3;
-  height: 50%;
+  height: 60vh;
   width: auto;
   flex-direction: column;
-  bottom: 5%;
+  bottom: 0%;
   left: 0%;
   position: fixed;
   opacity: 0;
@@ -15,17 +15,18 @@
 .image {
   height: 50px;
   width: 50px;
-  margin: 5% 10%;
-  display: block;
-
+  margin: 5% 20%;
+}
+.a1{
+  display: flex;
 }
 
 .verticalBar {
-  height: 500px;
+  height: 60vh;
   width: 50%;
   border-right: 0.4em solid;
   border-color: #c58028;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 @keyframes fade-in {
   100% {

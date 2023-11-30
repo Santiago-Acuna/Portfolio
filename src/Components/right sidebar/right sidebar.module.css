@@ -1,32 +1,35 @@
 .box {
   grid-column: 3/4;
-  grid-row: 2/3;
-  height: 55%;
+  height: 60vh;
   width: 3%;
+  display: flex;
   flex-direction: column;
-  bottom: 0%;
+  text-align: center;
+  bottom:0%;
   right: 0%;
   position: fixed;
   opacity: 0;
   animation: fade-in 1.5s ease-in forwards;
 }
 .p1Box {
-  height: 50%;
+  height: auto;
+  width: 100%;
+  font-size: 1.2rem;
+  background-color:#0A192F;
+  z-index: 2;
 }
 .p1 {
   color: white;
-  transform: rotate(90deg);
+  writing-mode: vertical-rl;
 }
 
 .p1:hover {
   color: #b1205a;
 }
 .verticalBar {
-  height: 50%;
-  width: 40%;
-  border-right: 0.2em solid;
-  border-color: #c58028;
-  display: block;
+  height: 60vh;
+  width: 50%;
+  border-right: 0.4em solid #c58028;
 }
 
 @keyframes fade-in {
@@ -35,8 +38,8 @@
   }
 }
 @media (max-width: 800px) {
-  .box{
+  .box {
     display: none;
-    pointer-events: none; 
+    pointer-events: none;
   }
 }
