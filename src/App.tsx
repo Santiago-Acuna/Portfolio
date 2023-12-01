@@ -26,8 +26,8 @@ const App: React.FC = () => {
   const [AllComponents, setAllComponents] = useState<Array<React.FC>>([
     About,
     Technologies,
-    Certificates,
     Projects,
+    Certificates,
     Contact,
     Footer,
   ]);
