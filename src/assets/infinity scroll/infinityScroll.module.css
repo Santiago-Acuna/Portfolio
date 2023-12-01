@@ -3,3 +3,9 @@
   flex-direction: column;
   place-items: center;
 }
+.lastDiv{
+  height: 10vh;
+  width: 100%;
+  background-color: red;
+  display: block;
+}

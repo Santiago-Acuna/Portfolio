@@ -17,7 +17,8 @@ const InfinityScrollComponentsHandler = async ({
   IsVisible,
   setIsVisible,
 }: InfinityScrollComponentsHandlerProps) => {
-  if (window.innerHeight + window.scrollY + 10 >= document.body.scrollHeight) {
+  const scrollHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+  if (window.innerHeight + window.scrollY + 10 >= scrollHeight) {
     const newComponent = AllComponents && AllComponents.shift();
     newComponent &&
       setComponents((prevComponents) => [...prevComponents, newComponent]);

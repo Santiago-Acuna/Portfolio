@@ -1,6 +1,6 @@
 .box {
   display: flex;
-  width: 55%;
+  width: 80%;
   flex-direction: column;
   align-content: space-between;
   margin: 10% 0px;
@@ -20,13 +20,14 @@
 
 .p1 {
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   color: #f9b82c;
   margin: 5% 0px;
 }
 
 .p2 {
   color: #ccd6f6;
+  font-size: 1.8rem;
 }
 
 @keyframes fade-in {
@@ -35,8 +36,8 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .box {
-    width: 100%;
+    width: 90%;
   }
 }

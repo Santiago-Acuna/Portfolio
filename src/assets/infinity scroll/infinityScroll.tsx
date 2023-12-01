@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect} from "react";
 import styles from "./infinityScroll.module.css";
 import {
   GlobalVisibleComponentsState,
@@ -15,7 +15,6 @@ const InfinityScrollComponent: React.FC = () => {
     GlobalAllComponentsState
   )!;
   const { IsVisible, setIsVisible } = useContext(IsComponentVisibleState)!;
-
   const handleScroll = () => {
     InfinityScrollComponentsHandler({
       AllComponents,
@@ -31,6 +30,12 @@ const InfinityScrollComponent: React.FC = () => {
   }, [IsVisible, Components]);
 
   useEffect(() => {
+    console.log("funka")
+    if(document.body.scrollHeight <= document.body.clientHeight && document.body.scrollWidth <= document.body.clientWidth){
+      const newComponent = AllComponents && AllComponents.shift();
+      newComponent &&
+        setComponents((prevComponents) => [...prevComponents, newComponent]);
+    }
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);

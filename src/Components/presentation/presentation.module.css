@@ -1,11 +1,10 @@
 .box {
   grid-column: 2/3;
   display: flex;
-  width: 80%;
+  width: 70%;
   flex-direction: column;
   align-content: space-between;
   margin-top: 10%;
-  margin-bottom: 10%;
   opacity: 0;
   animation: fade-in 1.5s ease-in forwards;
 }
@@ -58,6 +57,13 @@
   100% {
     opacity: 1;
   }
+}
+
+@media (max-width: 1200px) {
+  .box {
+    width: 80%;
+  }
+
 }
 
 @media (max-width: 900px) {
