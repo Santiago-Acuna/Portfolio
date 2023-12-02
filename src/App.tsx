@@ -9,7 +9,8 @@ import Certificates from "./Components/certificates/certificates.tsx";
 import Footer from "./Components/footer/footer.tsx";
 import LeftSideBar from "./Components/left sidebar/left sidebar";
 import RightSideBar from "./Components/right sidebar/right sidebar";
-import InfinityScroll from "./assets/infinity scroll/infinityScroll.tsx";
+// import InfinityScroll from "./assets/infinity scroll/infinityScroll.tsx";
+import InfinityScrollComponent from "./assets/infinity scroll/infinityScroll.tsx";
 import {
   GlobalLanguageState,
   GlobalAllComponentsState,
@@ -46,7 +47,7 @@ const App: React.FC = () => {
             >
               <Navbar />
               <div className={styles.mainContent}>
-                <InfinityScroll />
+                <InfinityScrollComponent />
               </div>
             </IsComponentVisibleState.Provider>
           </GlobalVisibleComponentsState.Provider>
