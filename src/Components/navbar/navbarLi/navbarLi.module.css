@@ -1,9 +1,33 @@
-.pointer:hover{
-  cursor:pointer;
-  color: #f9b82c;
+.pointer {
+  text-decoration: none;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    color: #f9b82c;
+
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color:#f9b82c;
+    transition: width 0.3s ease;
+    cursor: pointer;
+    color: #f9b82c;
+  }
+
+  &.active::after,
+  &:hover::after {
+    width: 100%;
+  }
 }
 
-.NavbarLi{
-  margin:  0 1%;
-  align-items: end
+.NavbarLi {
+  margin: 0 1%;
+  align-items: end;
 }

@@ -11,26 +11,25 @@ interface ComputerNavBarProps {
 }
 const NavbarList = ({ menuType, closeMenu }: ComputerNavBarProps) => {
   const { setLanguage } = useContext(GlobalLanguageState)!;
+
   return (
     <ul className={styles[menuType + "Menu"]}>
       <li>
-        {
-          menuType === "phone" && (
-            <img
-              src={close}
-              className={styles.closeMenuImg}
-              onClick={closeMenu}
-              alt="close menu"
-              onMouseOver={(e) => (e.currentTarget.src = closeYellow)}
-              onMouseOut={(e) => (e.currentTarget.src = close)}
-            />
-          )
-        }
+        {menuType === "phone" && (
+          <img
+            src={close}
+            className={styles.closeMenuImg}
+            onClick={closeMenu}
+            alt="close menu"
+            onMouseOver={(e) => (e.currentTarget.src = closeYellow)}
+            onMouseOut={(e) => (e.currentTarget.src = close)}
+          />
+        )}
       </li>
       <NavbarLi
         English="Home"
         Spanish="Inicio"
-        id="Home"
+        id="Presentation"
         closeMenu={closeMenu}
       />
       <NavbarLi
@@ -46,15 +45,15 @@ const NavbarList = ({ menuType, closeMenu }: ComputerNavBarProps) => {
         closeMenu={closeMenu}
       />
       <NavbarLi
-        English="Certificates"
-        Spanish="Certificados"
-        id="Certificates"
-        closeMenu={closeMenu}
-      />
-      <NavbarLi
         English="Projects"
         Spanish="Proyectos"
         id="Projects"
+        closeMenu={closeMenu}
+      />
+      <NavbarLi
+        English="Certificates"
+        Spanish="Certificados"
+        id="Certificates"
         closeMenu={closeMenu}
       />
       <NavbarLi

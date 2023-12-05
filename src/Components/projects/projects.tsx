@@ -11,7 +11,7 @@ const urlRecipesGithub = "https://github.com/Santiago-Acuna/Recipes";
 const urlRecipes = "https://pi-food-vercel.vercel.app/";
 const urlHypeGithub = "https://github.com/Santiago-Acuna/Hype-Shop";
 const urlHype = "https://hype-kappa.vercel.app/";
-const proyectsTechnologiesProjectRecipes=["HTML", "CSS", "JAVASCRIPT","NODE", "REACT", "REDUX",  "Express", "Sequelize.js","PostgreSQL", "SQL"]
+const proyectsTechnologiesProjectRecipes=["HTML", "CSS", "TypeScript","NODE", "REACT", "REDUX",  "Express", "MongoDB","Mongoose"]
 
 const proyectsTechnologiesProjectHypeShop=["HTML", "CSS", "JAVASCRIPT","NODE", "REACT", "REDUX", "Express", "Sequelize.js","PostgreSQL", "SQL","GIT"]
 

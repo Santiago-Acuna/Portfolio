@@ -91,6 +91,9 @@
   width: 80%;
   margin:25% 0
 }
+.littleText{
+  font-size: 1.0rem;
+}
 
 @keyframes fade-in {
   100% {

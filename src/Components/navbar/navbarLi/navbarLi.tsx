@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import styles from "./navbarLi.module.css"
+import styles from "./navbarLi.module.css";
 import TranslateText from "../../../assets/TranslateText/translateText.tsx";
 import { IsComponentVisibleState } from "../../../assets/GlobalStates/globalStates.tsx";
 
@@ -10,20 +10,23 @@ interface NavBarLiProps {
   closeMenu: React.MouseEventHandler<HTMLElement>;
 }
 
-const NavbarLi: React.FC<NavBarLiProps> = ({ English, Spanish, id, closeMenu }) => {
-  const { IsVisible, setIsVisible } = useContext(IsComponentVisibleState)!;
-
+const NavbarLi: React.FC<NavBarLiProps> = ({
+  English,
+  Spanish,
+  id,
+  closeMenu,
+}) => {
   const idNavbarLi = id + " idNavbarLi";
-
-  const IsNoVisible :React.MouseEventHandler<HTMLElement>= (e) => {
-    e.preventDefault()
+  const { IsVisible, setIsVisible } = useContext(IsComponentVisibleState)!;
+  const IsNoVisible: React.MouseEventHandler<HTMLElement> = (e) => {
+    e.preventDefault();
     setIsVisible({ ...IsVisible, id, component: "no" });
-    closeMenu(e)
+    closeMenu(e);
   };
 
   return (
-    <li  className={styles.NavbarLi} id={`${idNavbarLi}`}>
-      <p  className={styles.pointer} onClick={(e) => IsNoVisible(e)}>
+    <li className={styles.NavbarLi} id={`${idNavbarLi}`}>
+      <p className={`${styles.pointer}`} onClick={(e) => IsNoVisible(e)}>
         <TranslateText English={English} Spanish={Spanish} />
       </p>
     </li>

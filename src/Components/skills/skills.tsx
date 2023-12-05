@@ -12,12 +12,14 @@ import TypeScript from "../../Images/typescript.jpg";
 import Sequalize from "../../Images/sequalize.png";
 import SQL from "../../Images/sql si.png";
 import Express from "../../Images/express-svgrepo-com.svg"
-// import MongoDB from "../../Images/Mongodb si.png";
+import MongoDB from "../../Images/Mongodb si.png";
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 import TranslateText from "../../assets/TranslateText/translateText.js";
 import Title from "../../assets/title/title.tsx";
 
+
 const Technologies: React.FC = () => {
+  const mongoose = "https://avatars.githubusercontent.com/u/7552965?s=280&v=4"
   const { Language } = useContext(GlobalLanguageState)!;
   const SkillsIcons: React.FC<{ skill: string; name: string }> = ({
     skill,
@@ -77,7 +79,8 @@ const Technologies: React.FC = () => {
           <SkillsIcons skill={Express} name={"Express"} />
           <SkillsIcons skill={Sequalize} name={"Sequalize"} />
           <SkillsIcons skill={TypeScript} name={"TypeScript"} />
-          {/* <SkillsIcons skill={MongoDB} name={"MongoDB"} /> */}
+          <SkillsIcons skill={MongoDB} name={"MongoDB"} />
+          <SkillsIcons skill={mongoose} name={"Mongoose"} />
         </div>
       </section>
     </div>

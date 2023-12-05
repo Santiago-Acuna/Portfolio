@@ -140,11 +140,8 @@ const ProjectsMold: React.FC<ProjectsMold> = ({
         </div>
         <button className={styles.technologies} onClick={backgroundColorOnHook} id = {`technologiesButtonOfProject${name}`}>
           <TranslateText English={"Technologies"} Spanish={"Tecnologías"} />
+         <p className={styles.littleText}><TranslateText English={"( Click me )"} Spanish={"( Haz click )"}/> </p> 
         </button>
-        {/* <p className={styles.p2}>
-            React Redux Css Nodejs Express Sequelize.js PostgreSQL Spoonacular
-            API
-          </p> */}
       </div>
     </div>
   );
