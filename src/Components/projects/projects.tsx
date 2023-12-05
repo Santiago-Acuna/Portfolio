@@ -8,7 +8,7 @@ import { recipesSumary, recipesSumarySpanish, hypeShopSumary, hypeShopSumarySpan
 import Title from "../../assets/title/title.tsx";
 
 const urlRecipesGithub = "https://github.com/Santiago-Acuna/Recipes";
-const urlRecipes = "https://pi-food-vercel.vercel.app/";
+const urlRecipes = "https://recipes-xi-five.vercel.app/";
 const urlHypeGithub = "https://github.com/Santiago-Acuna/Hype-Shop";
 const urlHype = "https://hype-kappa.vercel.app/";
 const proyectsTechnologiesProjectRecipes=["HTML", "CSS", "TypeScript","NODE", "REACT", "REDUX",  "Express", "MongoDB","Mongoose"]
