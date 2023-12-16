@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import NavbarLi from "./navbarLi/navbarLi.tsx";
 import styles from "./navbar.module.css";
-import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
+import { GlobalLanguageState, CurrentSectionState } from "../../assets/GlobalStates/globalStates.tsx";
 import close from "../../Images/close-icon-white.png";
 import closeYellow from "../../Images/close-icon-yellow.png";
 
@@ -11,6 +11,7 @@ interface ComputerNavBarProps {
 }
 const NavbarList = ({ menuType, closeMenu }: ComputerNavBarProps) => {
   const { setLanguage } = useContext(GlobalLanguageState)!;
+  const { CurrentSection } = useContext(CurrentSectionState)!;
 
   return (
     <ul className={styles[menuType + "Menu"]}>
@@ -31,36 +32,42 @@ const NavbarList = ({ menuType, closeMenu }: ComputerNavBarProps) => {
         Spanish="Inicio"
         id="Presentation"
         closeMenu={closeMenu}
+        currentSection={CurrentSection}
       />
       <NavbarLi
         English="About"
         Spanish="Sobre mi"
         id="About"
         closeMenu={closeMenu}
+        currentSection={CurrentSection}
       />
       <NavbarLi
         English="Technologies"
         Spanish="Tecnologías"
         id="Technologies"
         closeMenu={closeMenu}
+        currentSection={CurrentSection}
       />
       <NavbarLi
         English="Projects"
         Spanish="Proyectos"
         id="Projects"
         closeMenu={closeMenu}
+        currentSection={CurrentSection}
       />
       <NavbarLi
         English="Certificates"
         Spanish="Certificados"
         id="Certificates"
         closeMenu={closeMenu}
+        currentSection={CurrentSection}
       />
       <NavbarLi
         English="Contact"
         Spanish="Contacto"
         id="Contact"
         closeMenu={closeMenu}
+        currentSection={CurrentSection}
       />
       {/*   <li>
     Sun

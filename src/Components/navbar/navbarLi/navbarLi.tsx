@@ -8,6 +8,7 @@ interface NavBarLiProps {
   Spanish: string;
   id: string;
   closeMenu: React.MouseEventHandler<HTMLElement>;
+  currentSection : string
 }
 
 const NavbarLi: React.FC<NavBarLiProps> = ({
@@ -15,6 +16,7 @@ const NavbarLi: React.FC<NavBarLiProps> = ({
   Spanish,
   id,
   closeMenu,
+  currentSection
 }) => {
   const idNavbarLi = id + " idNavbarLi";
   const { IsVisible, setIsVisible } = useContext(IsComponentVisibleState)!;
@@ -23,10 +25,11 @@ const NavbarLi: React.FC<NavBarLiProps> = ({
     setIsVisible({ ...IsVisible, id, component: "no" });
     closeMenu(e);
   };
+  const pClass = `${styles.pointer} ${currentSection === id ? styles.active : ''}`;
 
   return (
     <li className={styles.NavbarLi} id={`${idNavbarLi}`}>
-      <p className={`${styles.pointer}`} onClick={(e) => IsNoVisible(e)}>
+      <p className={pClass} onClick={(e) => IsNoVisible(e)}>
         <TranslateText English={English} Spanish={Spanish} />
       </p>
     </li>

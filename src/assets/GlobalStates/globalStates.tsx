@@ -21,6 +21,13 @@ interface IsComponentVisibleStateProps {
     React.SetStateAction<{ component: string; id: string }>
   >;
 }
+interface CurrentSectionProps {
+  CurrentSection: string;
+  setCurrentSection: React.Dispatch<
+    React.SetStateAction<string>
+  >;
+}
+
 
 export const GlobalLanguageState = React.createContext<
   LanguageStateProps | undefined
@@ -36,3 +43,7 @@ export const GlobalAllComponentsState = React.createContext<
 export const IsComponentVisibleState = React.createContext<
   IsComponentVisibleStateProps | undefined
 >(undefined);
+export const CurrentSectionState = React.createContext<
+CurrentSectionProps| undefined
+>(undefined);
+

@@ -9,15 +9,16 @@ import Certificates from "./Components/certificates/certificates.tsx";
 import Footer from "./Components/footer/footer.tsx";
 import LeftSideBar from "./Components/left sidebar/left sidebar";
 import RightSideBar from "./Components/right sidebar/right sidebar";
-// import InfinityScroll from "./assets/infinity scroll/infinityScroll.tsx";
 import InfinityScrollComponent from "./assets/infinity scroll/infinityScroll.tsx";
 import {
   GlobalLanguageState,
   GlobalAllComponentsState,
   GlobalVisibleComponentsState,
   IsComponentVisibleState,
+  CurrentSectionState,
 } from "./assets/GlobalStates/globalStates.tsx";
 import Presentation from "./Components/presentation/presentation.tsx";
+// import IntersectionObserverComponent from "./assets/SectionObserver/SectionObserver.tsx";
 const App: React.FC = () => {
   const [Language, setLanguage] = useState<string>("English");
   const [Components, setComponents] = useState<Array<React.FC>>([Presentation]);
@@ -32,6 +33,7 @@ const App: React.FC = () => {
     Contact,
     Footer,
   ]);
+  const [CurrentSection, setCurrentSection] = useState<string>("");
 
   return (
     <div className={styles.app}>
@@ -45,10 +47,12 @@ const App: React.FC = () => {
             <IsComponentVisibleState.Provider
               value={{ IsVisible, setIsVisible }}
             >
-              <Navbar />
-              <div className={styles.mainContent}>
-                <InfinityScrollComponent />
-              </div>
+              <CurrentSectionState.Provider value={{ CurrentSection, setCurrentSection }}>
+                <Navbar />
+                <div className={styles.mainContent}>
+                  <InfinityScrollComponent />
+                </div>
+              </CurrentSectionState.Provider>
             </IsComponentVisibleState.Provider>
           </GlobalVisibleComponentsState.Provider>
         </GlobalAllComponentsState.Provider>
