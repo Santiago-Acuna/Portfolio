@@ -10,9 +10,9 @@ import POSTGRESQL from "../../Images/postgresql.png";
 import Redux from "../../Images/redux.png";
 import TypeScript from "../../Images/typescript.jpg";
 import Sequalize from "../../Images/sequalize.png";
-import SQL from "../../Images/sql si.png";
-import Express from "../../Images/express-svgrepo-com.svg"
-import MongoDB from "../../Images/Mongodb si.png";
+import SQL from "../../Images/sql.png";
+import Express from "../../Images/express.svg"
+import MongoDB from "../../Images/MongoDB.png";
 import { GlobalLanguageState } from "../../assets/GlobalStates/globalStates.tsx";
 import TranslateText from "../../assets/TranslateText/translateText.js";
 import Title from "../../assets/title/title.tsx";

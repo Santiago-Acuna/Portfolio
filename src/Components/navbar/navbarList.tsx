@@ -41,6 +41,13 @@ const NavbarList = ({ menuType, closeMenu }: ComputerNavBarProps) => {
         closeMenu={closeMenu}
         currentSection={CurrentSection}
       />
+       <NavbarLi
+        English="Experience"
+        Spanish="Experiencia"
+        id="Experience"
+        closeMenu={closeMenu}
+        currentSection={CurrentSection}
+      />
       <NavbarLi
         English="Technologies"
         Spanish="Tecnologías"

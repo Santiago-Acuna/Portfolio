@@ -10,6 +10,7 @@ import Footer from "./Components/footer/footer.tsx";
 import LeftSideBar from "./Components/left sidebar/left sidebar";
 import RightSideBar from "./Components/right sidebar/right sidebar";
 import InfinityScrollComponent from "./assets/infinity scroll/infinityScroll.tsx";
+import Experience from "./Components/experience/experience.tsx";
 import {
   GlobalLanguageState,
   GlobalAllComponentsState,
@@ -27,6 +28,7 @@ const App: React.FC = () => {
   );
   const [AllComponents, setAllComponents] = useState<Array<React.FC>>([
     About,
+    Experience,
     Technologies,
     Projects,
     Certificates,
